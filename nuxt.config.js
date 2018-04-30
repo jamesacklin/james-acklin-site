@@ -50,13 +50,14 @@ module.exports = {
     ]
   },
   modules: [
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
   ],
   markdownit: {
     linkify: true
   },
   css: [
-    'assets/transition.css'
+    '~assets/main.css',
+    '~assets/transition.css'
   ],
   loading: {
     color: '#9e9f89'
@@ -68,6 +69,8 @@ module.exports = {
   },
   build: {
     extend (config, { isDev, isClient }) {
+      const cssLoader = config.module.rules.find((loader) => loader.test.toString() === '/\\.css$/')
+      cssLoader.use.push('postcss-loader')
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
