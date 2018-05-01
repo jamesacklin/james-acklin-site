@@ -42,11 +42,11 @@ function getSlugs(post, index) {
 
 module.exports = {
   head: {
-    title: 'nuxt-site',
+    title: 'James Acklin',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'description', name: 'description', content: 'James Acklin, designer + developer' }
     ],
     link: [
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Work+Sans' }
