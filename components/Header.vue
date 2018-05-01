@@ -17,6 +17,7 @@
       return {
         navigation: {
           'Index': '/',
+          'Reading': '/reading',
           'Currently': '/currently'
         }
       }
