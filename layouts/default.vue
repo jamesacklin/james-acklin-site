@@ -31,4 +31,8 @@
   a:hover {
     text-decoration: none;
   }
+  a:focus,
+  .link:focus {
+    outline: none;
+  }
 </style>
