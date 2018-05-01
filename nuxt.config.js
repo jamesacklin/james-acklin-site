@@ -2,7 +2,6 @@ const { join } = require('path')
 const dir = require('node-dir')
 const routesArray = []
 const fs = require('fs')
-const _ = require('lodash')
 
 var files = fs.readdirSync('./static/markdown');
 
