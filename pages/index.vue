@@ -14,5 +14,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  >>> p:first-of-type { font-size: 1.5rem; }
 </style>
