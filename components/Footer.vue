@@ -5,12 +5,11 @@
       <p class="measure">Updated somedate</p>
     </div>
     <div class="fl w-50-l">
-      <p>
-
-        <a class="link underline-hover" v-html="Object.keys(social)[0]" :href="'mailto:' + social.Email"></a>,
-        <a class="link underline-hover" v-html="Object.keys(social)[1]" :href="social.Arena"></a>, or
-        <a class="link underline-hover" v-html="Object.keys(social)[2]" :href="social.Twitter"></a>
-      </p>
+      <ul class="list">
+        <li v-for="(link, service, key) in social" v-bind:key="key">
+          <a class="link underline-hover" v-html="service" v-bind:href="link"></a>
+        </li>
+      </ul>
     </div>
   </footer>
 </template>
@@ -20,17 +19,11 @@
     data(){
       return {
         social: {
-          'Email': 'james.acklin@gmail.com',
-          'Arena': 'http://are.na/james-acklin/',
-          'Twitter': 'http://www.twitter.com/jamesacklin'
+          'Email': 'mailto:james.acklin@gmail.com',
+          'Twitter': 'http://www.twitter.com/jamesacklin',
+          'Are.na': 'http://are.na/james-acklin/'
         }
       }
     }
   }
 </script>
-
-<style scoped>
-  .link {
-    color: #9e9f89;
-  }
-</style>

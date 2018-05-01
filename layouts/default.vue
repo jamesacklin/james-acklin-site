@@ -25,4 +25,10 @@
   main {
     font-family: "Work Sans";
   }
+  a, .link {
+    color: #9e9f89;
+  }
+  a:hover {
+    text-decoration: none;
+  }
 </style>
