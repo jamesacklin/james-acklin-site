@@ -1,16 +1,19 @@
 <template>
-  <div>
+  <main class="f6 f5-ns f4-l near-black">
     <site-header></site-header>
     <nuxt/>
-  </div>
+    <site-footer></site-footer>
+  </main>
 </template>
 
 <script>
   import SiteHeader from '~/components/Header.vue'
+  import SiteFooter from '~/components/Footer.vue'
 
   export default {
     components: {
-      SiteHeader
+      SiteHeader,
+      SiteFooter
     },
     beforeRouteLeave(to,from,next){
       console.log(this)
@@ -19,4 +22,7 @@
 </script>
 
 <style>
+  main {
+    font-family: "Work Sans";
+  }
 </style>
