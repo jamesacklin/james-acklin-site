@@ -3,7 +3,6 @@ const dir = require('node-dir')
 const routesArray = []
 const fs = require('fs')
 const _ = require('lodash')
-const axios = require('axios')
 
 var files = fs.readdirSync('./static/markdown');
 

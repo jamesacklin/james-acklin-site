@@ -17,7 +17,6 @@
     "@nuxtjs/markdownit": "^1.2.1",
     "axios": "^0.18.0",
     "dat-node": "^3.5.8",
-    "lodash": "^4.17.10",
     "node-dir": "^0.1.17",
     "npm": "^6.0.0",
     "nuxt": "^1.0.0",
