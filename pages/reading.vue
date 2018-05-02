@@ -36,6 +36,6 @@ export default {
   >>> li:before {
     content: "→";
     position: absolute;
-    left: -1.75rem;
+    left: -1.33em;
   }
 </style>

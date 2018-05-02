@@ -38,6 +38,6 @@
   .nuxt-link-exact-active:before {
     content: "→";
     position: absolute;
-    left: -1.33rem;
+    left: -1.33em;
   }
 </style>
