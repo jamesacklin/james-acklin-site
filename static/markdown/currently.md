@@ -1,8 +1,9 @@
-## Currently
-
 An attempt to keep track of what I'm working on, thinking about, designing, reading, or otherwise occupying my time with at a high level, without resorting to an entry-laden, prose-heavy "blog" format. Not strictly work-focused.
 
 ### May 2018
+- Relaunching this site using [Nuxt](http://www.nuxtjs.org/) and [Now](https://zeit.co/now) in lieu of Jekyll and GitHub Pages
+- Designing an [outdoor room](http://www.iwritewordsgood.com/apl/patterns/apl163.htm) and [half-hidden garden](http://www.iwritewordsgood.com/apl/patterns/apl111.htm) with a [garden seat](http://www.iwritewordsgood.com/apl/patterns/apl176.htm) and [paving with cracks between the stones](http://www.iwritewordsgood.com/apl/patterns/apl247.htm)
+- Subsequently understanding why interaction designers love Christopher Alexander and why architects loathe him
 - Visiting Los Angeles for the first time
 
 ### April 2018
