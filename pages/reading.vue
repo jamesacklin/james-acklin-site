@@ -17,7 +17,7 @@ export default {
   transition: 'fade',
 
   asyncData({req, params}){
-    return axios.get(`https://api.are.na/v2/channels/reading-1521592518`)
+    return axios.get(`https://api.are.na/v2/channels/reading-1527615453`)
     .then((res) => {
        return {
          readingList: res.data.contents.reverse().slice(0, 5)
