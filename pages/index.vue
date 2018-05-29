@@ -5,15 +5,15 @@
 <script>
 export default {
   transition: 'fade',
-  async asyncData ({params}) {
-    const fileContent = await import(`~/static/markdown/index.md`)
+  async asyncData({ params }) {
+    const fileContent = await import(`~/static/markdown/index.md`);
     return {
       content: fileContent
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>
-  >>> p:first-of-type { font-size: 1.5rem; }
+/* >>> p:first-of-type { font-size: 1.5rem; } */
 </style>
