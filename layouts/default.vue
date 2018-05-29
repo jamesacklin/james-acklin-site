@@ -1,6 +1,6 @@
 <template>
-  <main v-bind:style="{paddingLeft: navHeight + 'px'}" class="f6 f5-ns f4-l near-black">
-    <site-header ref="mainNav"></site-header>
+  <main class="f6 f5-ns f4-l near-black pl4 pl5-ns">
+    <site-header></site-header>
     <nuxt/>
     <site-footer></site-footer>
   </main>
@@ -22,9 +22,6 @@ export default {
   },
   beforeRouteLeave(to, from, next) {
     console.log(this);
-  },
-  mounted() {
-    this.navHeight = this.$refs.mainNav._data.height;
   }
 };
 </script>
