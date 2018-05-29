@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 nav {
-  top: 100%;
+  top: 100vh;
   transform: rotate(-90deg);
   transform-origin: top left;
   width: 100vh;
