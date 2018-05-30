@@ -15,5 +15,18 @@ export default {
 </script>
 
 <style scoped>
-/* >>> p:first-of-type { font-size: 1.5rem; } */
+>>> ul {
+  padding-left: 1.33em;
+}
+
+>>> li {
+  list-style: none;
+  position: relative;
+}
+
+>>> li:before {
+  content: '→';
+  position: absolute;
+  left: -1.33em;
+}
 </style>

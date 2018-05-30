@@ -5,18 +5,33 @@
 </template>
 
 <script>
-
 export default {
   transition: 'fade',
-  async asyncData ({params}) {
-    const fileContent = await import(`~/static/markdown/${params.slug}.md`)
+  async asyncData({ params }) {
+    const fileContent = await import(`~/static/markdown/${params.slug}.md`);
     return {
       content: fileContent
-    }
+    };
   }
-}
+};
 </script>
 
-<style>
+<style scoped>
+>>> h3 {
+  font-weight: normal;
+}
+>>> ul {
+  padding-left: 1.33em;
+}
 
+>>> li {
+  list-style: none;
+  position: relative;
+}
+
+>>> li:before {
+  content: '→';
+  position: absolute;
+  left: -1.33em;
+}
 </style>
