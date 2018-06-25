@@ -21,8 +21,8 @@
       return {
         social: {
           'Email': 'mailto:james.acklin@gmail.com',
-          'Twitter': 'http://www.twitter.com/jamesacklin',
-          'Are.na': 'http://are.na/james-acklin/'
+          'Twitter': 'https://www.twitter.com/jamesacklin',
+          'Are.na': 'https://are.na/james-acklin/'
         }
       }
     }

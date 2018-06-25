@@ -41,6 +41,9 @@ function getSlugs(post, index) {
 
 module.exports = {
   head: {
+    htmlAttrs: {
+        lang: 'en'
+    },
     title: 'James Acklin',
     meta: [
       { charset: 'utf-8' },
