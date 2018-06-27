@@ -1,0 +1,10 @@
+{
+  "name": "jamesacklin",
+  "alias": ["jamesacklin.com", "www.jamesacklin.com"],
+  "files": ["dist"],
+  "type": "static",
+  "static": {
+    "trailingSlash": true,
+    "public": "dist"
+  }
+}
