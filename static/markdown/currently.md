@@ -1,12 +1,28 @@
 An attempt to keep track of what I'm working on, thinking about, designing, reading, or otherwise occupying my time with at a high level, without resorting to an entry-laden, prose-heavy "blog" format. Not strictly work-focused.
 
+### August 2018
+
+* Condensing Rhiza's sprawling and detailed user-facing documentation and building a searchable, accessible home for it on the web using [Vuepress](https://vuepress.vuejs.org/) and some custom Vue components
+
+### July 2018
+
+* Designing a [logo](https://www.dropbox.com/s/wtem9rskg28l8fi/Diamond%20-%20Wordmark%20-%20WB.png?dl=0) for [Steady State Cycles](https://steadystatecycles.com/), a high-end road and mountain bike shop owned by some friends in Pittsburgh
+* Developing some UX improvements to [Dirt Rag Magazine](http://dirtragmag.com/) via Vue components and the WP-JSON API, extending the shelf life of their purchased premium Wordpress theme until it's time for a full redesign
+* Riding the scenic roads and sketchy single-track trails of the Pioneer Valley of Western Massachusetts for the [JAM Fund Grand FUNdo](https://www.dropbox.com/s/8gpy5bqtryv7xas/PROOF%20Fundo%20Poster.png?dl=0)
+
+### June 2018
+
+* Designing a full-bodied user-contributed dataset uploader + composer for Rhiza based entirely on user feedback and strategic use-cases ([abstract](https://www.dropbox.com/s/nsreuzyrqnfmteb/Abstract%2C%20User-Uploaded%20Data%20Expansion%20in%20Rhiza.pdf?dl=0), [prototype](https://github.com/jamesacklin/user-contrib-prototype))
+* Relentlessly jamming the new [A$AP Rocky](http://www.vulture.com/2018/05/review-ausdap-rockys-album-testing.html)
+* Playing around with [Stylefy](https://github.com/Jarzka/stylefy) for ClojureScript components
+
 ### May 2018
 
 * Relaunching this site using [Nuxt](http://www.nuxtjs.org/) and [Now](https://zeit.co/now) in lieu of Jekyll and GitHub Pages
 * Designing an [outdoor room](http://www.iwritewordsgood.com/apl/patterns/apl163.htm) and [half-hidden garden](http://www.iwritewordsgood.com/apl/patterns/apl111.htm) with a [garden seat](http://www.iwritewordsgood.com/apl/patterns/apl176.htm) and [paving with cracks between the stones](http://www.iwritewordsgood.com/apl/patterns/apl247.htm)
 * Subsequently understanding why interaction designers love Christopher Alexander and why architects loathe him
 * Visiting Los Angeles for the first time
-* Creating a poster for the [JAM Fund Grand FUNdo](https://www.dropbox.com/s/8gpy5bqtryv7xas/PROOF%20Fundo%20Poster.png?dl=0), a bike ride in the Pioneer Valley of Western Massachusetts benefitting the premier cyclocross development program in the US
+* Creating a poster for the [JAM Fund Grand FUNdo](https://www.dropbox.com/s/8gpy5bqtryv7xas/PROOF%20Fundo%20Poster.png?dl=0), a bike ride benefitting the premier cyclocross development program in the US
 * Reading _[Exquisite Corpse: Writing on Buildings](https://www.versobooks.com/books/778-exquisite-corpse)_ by Michael Sorkin and [collecting references](https://www.are.na/james-acklin/exquisite-corpse-references)
 
 ### April 2018
