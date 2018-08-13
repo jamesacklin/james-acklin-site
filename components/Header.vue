@@ -16,7 +16,7 @@
     <div
       id="projects"
       v-if="isDrawerOpen"
-      class="absolute bg-light-gray ph5 pv3 w-two-thirds w-50-m w-third-l h-100 z-1 project-drawer">
+      class="fixed bg-light-gray ph5 pv3 w-two-thirds w-50-m w-third-l h-100 z-1 project-drawer">
       <a @click="toggleDrawer" title="Close Project Navigation" aria-hidden="true" class="absolute top-1 right-1 no-underline black f4 pointer">&larr;</a>
       <h2>Project Samples</h2>
       <p class="lh-copy f6">Work samples and case studies from some projects I've completed in the recent past.</p>
