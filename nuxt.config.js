@@ -65,7 +65,7 @@ module.exports = {
     '~assets/transition.css'
   ],
   loading: {
-    color: '#FFFFFF'
+    color: '#9e9f89'
   },
   generate: {
     routes: function() {

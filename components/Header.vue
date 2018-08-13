@@ -1,27 +1,61 @@
 <template>
-  <nav class="ph3 flex h2 h3-ns items-center fixed left-0">
-    <div class="w-50">
-      <h1 class="white f6 f5-ns f4-l ma0 pa0 normal lh-copy">James Acklin</h1>
+  <div>
+    <nav class="ph3 flex h2 h3-ns items-center fixed left-0">
+      <div class="w-25">
+        <h1 class="white f6 f5-ns f4-l ma0 pa0 normal lh-copy">James Acklin</h1>
+      </div>
+      <ul class="list ma0 pa0 lh-copy w-75 flex justify-between">
+        <li class="main-nav-link" v-for="(link, page, key) in navigation" v-bind:key="key">
+          <nuxt-link class="nav-item db link underline-hover white" v-html="page" v-bind:to="link"></nuxt-link>
+        </li>
+        <li class="main-nav-link">
+          <a class="no-underline underline-hover pointer" @click="toggleDrawer">Projects &darr;</a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      id="projects"
+      v-if="isDrawerOpen"
+      class="absolute bg-light-gray ph5 pv3 w-two-thirds w-50-m w-third-l h-100 z-1 project-drawer">
+      <a @click="toggleDrawer" title="Close Project Navigation" aria-hidden="true" class="absolute top-1 right-1 no-underline black f4 pointer">&larr;</a>
+      <h2>Project Samples</h2>
+      <p class="lh-copy f6">Work samples and case studies from some projects I've completed in the recent past.</p>
+      <ul class="list ma0 pa0 lh-copy">
+        <li v-for="(link, page, key) in projects" v-bind:key="key">
+          <nuxt-link class="nav-item db link underline-hover no-underline near-black" v-html="page" v-bind:to="link"></nuxt-link>
+        </li>
+      </ul>
     </div>
-    <ul class="list ma0 pa0 lh-copy w-50 flex justify-between">
-      <li class="" v-for="(link, page, key) in navigation" v-bind:key="key">
-        <nuxt-link class="nav-item db link underline-hover white" v-html="page" v-bind:to="link"></nuxt-link>
-      </li>
-    </ul>
-  </nav>
+  </div>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {
+      isDrawerOpen: false,
       navigation: {
-        Index: '/',
-        Reading: '/reading',
-        Currently: '/currently'
+        "Index": "/",
+        "Reading": "/reading",
+        "Currently": "/currently"
+      },
+      projects: {
+        "Rhiza": "/rhiza",
+        "Rhiza Explore Page": "/rhiza-explorer"
       }
     };
-  }
+  },
+  watch: {
+    '$route' (to, from) {
+      this.isDrawerOpen = false
+    }
+  },
+  methods: {
+    toggleDrawer: function () {
+      this.isDrawerOpen = !this.isDrawerOpen
+    }
+  },
+  created: function () {}
 };
 </script>
 
@@ -33,16 +67,24 @@ nav {
   width: 100vh;
   background: #9e9f89;
 }
-a,
-.link {
+.main-nav-link >>> a,
+.main-nav-link >>> .link {
   color: #ffffff;
+}
+.main-nav-link >>> a:focus,
+.main-nav-link >>> .link:focus {
+  text-decoration: none;
 }
 .nuxt-link-exact-active {
   position: relative;
 }
 .nuxt-link-exact-active:before {
-  content: '→';
+  content: "→";
   position: absolute;
   left: -1.33em;
+  color: inherit;
+}
+.project-drawer >>> a {
+  color: #111;
 }
 </style>

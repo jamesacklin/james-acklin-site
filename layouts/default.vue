@@ -21,7 +21,6 @@ export default {
     SiteFooter
   },
   beforeRouteLeave(to, from, next) {
-    console.log(this);
   }
 };
 </script>
