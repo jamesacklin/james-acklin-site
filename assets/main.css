@@ -1,2 +1,41 @@
 /*import tachyons*/
 @import '~tachyons/css/tachyons.min.css';
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Art direction for specific figures */
+
+.rhiza-presentation-demo {
+  box-shadow: 0px 1px 6px #666;
+  position: relative;
+  margin: 0 auto;
+}
+
+.rhiza-presentation-demo video {
+  display: none;
+}
+
+@media (min-width: 1200px){
+  .rhiza-presentation-demo {
+    width: 1000px;
+    margin-left: -170px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .rhiza-presentation-demo video {
+    display: block;
+    position: absolute;
+    top: 93px;
+    left: 19px;
+  }
+}
+
+.admin-demo {
+  margin: 0 auto;
+  box-shadow: 0px 1px 6px #666;
+}
