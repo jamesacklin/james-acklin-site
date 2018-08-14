@@ -2,9 +2,9 @@
   <div>
     <nav class="ph3 flex h2 h3-ns items-center z-2 left-0">
       <div class="w-25">
-        <h1 class="white f6 f5-ns f4-l ma0 pa0 normal lh-copy">James&nbsp;Acklin</h1>
+        <h1 class="white f6 f5-ns f4-l ma0 pa0 normal lh-solid">James Acklin</h1>
       </div>
-      <ul class="list ma0 pa0 lh-copy w-75 flex justify-between">
+      <ul class="list ma0 pa0 lh-copy w-75 flex justify-between main-nav-list">
         <li class="main-nav-link" v-for="(link, page, key) in navigation" v-bind:key="key">
           <nuxt-link class="nav-item db link underline-hover white" v-html="page" v-bind:to="link"></nuxt-link>
         </li>
@@ -128,6 +128,16 @@ nav {
 }
 
 @media (max-height: 40em){
+  nav {
+    height: 3em;
+  }
+  .main-nav-list {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  .main-nav-link {
+    width: 50%;
+  }
   .project-drawer {
     width: 100%;
     border-right: 0;
@@ -139,6 +149,16 @@ nav {
   }
 }
 @media (max-height: 40em) and (min-width: 30em){
+  nav {
+    height: 4em;
+  }
+  .main-nav-list {
+    padding: 0;
+    flex-wrap: nowrap;
+  }
+  .main-nav-link {
+    width: auto;
+  }
   .project-drawer {
     top: 4rem;
   }

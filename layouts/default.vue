@@ -41,7 +41,11 @@ a:focus,
   outline: none;
 }
 
-@media (max-height: 40em) and (orientation: landscape){
+@media (max-height: 40em) {
+  main { padding-top: 2em; }
+}
+
+@media (max-height: 40em) and (min-width: 30em){
   main { padding-top: 5rem; }
 }
 
