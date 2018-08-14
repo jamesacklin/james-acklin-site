@@ -1,5 +1,5 @@
 <template>
-  <main class="f6 f5-ns f4-l near-black pl4 pl5-ns">
+  <main class="f6 f5-ns f4-l near-black">
     <site-header></site-header>
     <nuxt/>
     <site-footer></site-footer>
@@ -39,5 +39,19 @@ a:hover {
 a:focus,
 .link:focus {
   outline: none;
+}
+
+@media (max-height: 40em) and (orientation: landscape){
+  main { padding-top: 5rem; }
+}
+
+@media (min-height: 40em){
+  main {
+    padding-left: 3rem;
+  }
+}
+
+@media (min-width: 30em) and (min-height: 40em){
+  main { padding-left: 4rem }
 }
 </style>

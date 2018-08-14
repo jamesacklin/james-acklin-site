@@ -4,3 +4,19 @@
 .fade-enter, .fade-leave-active {
   opacity: 0;
 }
+
+.slide-fade-enter-active {
+  transition: all .2s ease;
+}
+.slide-fade-leave-active {
+  transition: all .2s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(-3rem);
+  opacity: 0;
+}
+@media (max-height: 40em){
+  .slide-fade-enter, .slide-fade-leave-to {
+    transform: translateY(-3rem);
+  }
+}
