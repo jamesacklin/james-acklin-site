@@ -95,7 +95,7 @@ nav {
   font-size: inherit;
 }
 
-@media (min-height: 40em){
+@media (min-height: 28em){
   nav {
     position: fixed;
     top: 100vh;
@@ -114,20 +114,20 @@ nav {
   }
 }
 
-@media (min-height: 40em) and (min-width: 30em){
+@media (min-height: 28em) and (min-width: 30em){
   .project-drawer {
     width: 50%;
     left: 4rem;
   }
 }
 
-@media (min-height: 40em) and (min-width: 60em){
+@media (min-height: 28em) and (min-width: 60em){
   .project-drawer {
     width: 33.3333%;
   }
 }
 
-@media (max-height: 40em){
+@media (max-height: 28em){
   nav {
     height: 3em;
   }
@@ -148,7 +148,7 @@ nav {
     content: "↑"
   }
 }
-@media (max-height: 40em) and (min-width: 30em){
+@media (max-height: 28em) and (min-width: 30em){
   nav {
     height: 4em;
   }
@@ -163,7 +163,7 @@ nav {
     top: 4rem;
   }
 }
-@media (max-height: 40em) and (min-width: 60em){
+@media (max-height: 28em) and (min-width: 60em){
   .project-drawer {
     top: 4rem;
   }

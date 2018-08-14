@@ -41,21 +41,21 @@ a:focus,
   outline: none;
 }
 
-@media (max-height: 40em) {
+@media (max-height: 28em) {
   main { padding-top: 2em; }
 }
 
-@media (max-height: 40em) and (min-width: 30em){
+@media (max-height: 28em) and (min-width: 30em){
   main { padding-top: 5rem; }
 }
 
-@media (min-height: 40em){
+@media (min-height: 28em){
   main {
     padding-left: 3rem;
   }
 }
 
-@media (min-width: 30em) and (min-height: 40em){
+@media (min-width: 30em) and (min-height: 28em){
   main { padding-left: 4rem }
 }
 </style>
