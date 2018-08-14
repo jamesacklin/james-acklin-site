@@ -18,7 +18,7 @@ export default {
 
   asyncData({ req, params }) {
     return axios
-      .get(`https://api.are.na/v2/channels/reading-1527615453`)
+      .get('https://api.are.na/v2/channels/reading-1527615453?per=10000')
       .then(res => {
         return {
           readingList: res.data.contents.reverse().slice(0, 5)
