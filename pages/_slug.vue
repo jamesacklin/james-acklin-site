@@ -1,6 +1,6 @@
 <template>
   <div :key="$route.params.slug">
-    <div v-html="content" class="lh-copy measure-wide center mw-9 pa3"></div>
+    <div v-html="content" class="lh-copy center mw-9 pa3"></div>
   </div>
 </template>
 
@@ -34,4 +34,15 @@ export default {
   position: absolute;
   left: -1.33em;
 }
+
+>>> .content {
+  max-width: 34em;
+  margin: auto auto;
+}
+
+>>> .figure {
+  text-align: center;
+  margin: 5rem 0;
+}
+
 </style>

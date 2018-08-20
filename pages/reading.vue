@@ -1,6 +1,8 @@
 <template>
   <div class="lh-copy measure-wide center mw-9 pa3">
+    <h1>Reading</h1>
     <p>The most recent 5 items from my reading list. <small><a href="https://www.are.na/james-acklin/reading-1527615453">✶✶</a></small></p>
+    <hr>
     <ul class="list">
       <li v-for="item in readingList" v-bind:key="item.id">
         <a class="no-underline underline-hover b" v-bind:href="item.source.url" v-html="item.title"></a>

@@ -1,3 +1,4 @@
+::: content
 # Rhiza Help Documentation
 
 <span class="gray">Making Rhiza's help documentation process more collaborative</span>
@@ -5,11 +6,9 @@
 ---
 
 ## Problem Definition
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ## Current Workflow
-
-![](/images/helpsite-process-single.png)
-
 - Workflow is distracting people from doing what they need to do: write and publish documentation
 - Single-author: all authorship lies with maintainer
 - Content locked away in proprietary format
@@ -20,9 +19,14 @@
 - Need to provision individual computers for SSH access to staging server
 - Deploy process beholden to OPS schedule
 
-## Proposed Workflow
+:::
 
-![](/images/helpsite-process-multi.png)
+::: figure
+![](/images/helpsite-process-single.png)
+:::
+
+::: content
+## Proposed Workflow
 
 - Only teach people what they need to know to contribute
 - Contributor model: everyone is responsible and can contribute
@@ -33,6 +37,11 @@
 - Use free or low-cost tools
 - Abstract or automate as much technical plumbing as possible
 - Keeps the project "in-house": anyone can deploy
+:::
+
+::: figure
+![](/images/helpsite-process-multi.png)
+:::
 
 ## Solution Auditing
 
@@ -41,3 +50,7 @@
 ![](/images/helpsite-deploys.png)
 
 ## Implementation
+
+![](/images/help-screenshot-home.png)
+![](/images/help-screenshot-data.png)
+![](/images/help-screenshot-tutorial.png)
