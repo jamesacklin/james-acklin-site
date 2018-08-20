@@ -43,14 +43,31 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 ![](/images/helpsite-process-multi.png)
 :::
 
+::: content
 ## Solution Auditing
 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque hic vero fugit labore, ducimus mollitia quibusdam excepturi, neque, fuga architecto quia? Nihil sunt cumque totam est quam inventore illo dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut delectus vero? Eveniet accusantium, laudantium? Neque, dolores, nam? Alias maxime dolorem nulla officiis fuga libero rem vel quia, inventore enim!
+:::
+
+::: figure
 ![](/images/helpsite-generators.png)
-
 ![](/images/helpsite-deploys.png)
+:::
 
+::: content
 ## Implementation
 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto adipisci veritatis dignissimos laudantium commodi provident, obcaecati aliquid optio sapiente quaerat porro perferendis modi, qui ipsum aut nesciunt inventore voluptatum, minima!
+:::
+
+::: content
+## Result
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia debitis in optio dicta libero cumque, a placeat et id vero alias adipisci dolor tempore sapiente culpa, animi inventore! Ea, rerum.
+:::
+
+::: figure
 ![](/images/help-screenshot-home.png)
 ![](/images/help-screenshot-data.png)
 ![](/images/help-screenshot-tutorial.png)
+:::
