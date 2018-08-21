@@ -8,12 +8,12 @@
 export default {
   transition: 'fade',
   async asyncData({ params }) {
-    const fileContent = await import(`~/static/markdown/${params.slug}.md`);
+    const fileContent = await import(`~/static/markdown/${params.slug}.md`)
     return {
       content: fileContent
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped>
@@ -45,4 +45,10 @@ export default {
   margin: 5rem 0;
 }
 
+>>> .figure h2,
+>>> .figure h3 {
+  max-width: 22.5em;
+  text-align: left;
+  margin: 3em auto;
+}
 </style>
