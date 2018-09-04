@@ -35,6 +35,7 @@ Customer Journey Maps detail the arc of engagement a user (or potential user) ha
 
 ::: figure
 ![Design Exercise: Customer Journey Mapping](/images/rhiza_general_journey_exercise.jpg)
+![Journey Map for Rhiza's Customer Onboarding Process](/images/rhiza-onboarding-process.png)
 :::
 
 ::: content
