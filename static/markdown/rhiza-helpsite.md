@@ -71,7 +71,7 @@ As a result, Rhiza now has an up-to-date documentation site, built atop open for
 :::
 
 ::: figure
-<img src="/images/help-screenshot-home.png" class="shadow-2 w-80-m w-80-l" />
+![](/images/rhiza-helpsite-collage.jpg)
 :::
 
 ::: content
