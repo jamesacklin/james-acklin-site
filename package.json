@@ -8,10 +8,14 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
+    "manifest": "node scripts/build.js",
     "generate": "node scripts/build.js; nuxt generate",
     "publish": "now; now alias",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "node scripts/build.js"
+    "precommit": "npm run lint"
+  },
+  "pre-commit": {
+    "manifest"
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.1",
