@@ -7,7 +7,7 @@
 
 ## Problem Definition
 
-The current Rhiza documentation site was authored and deployed by a single author as a stopgap solution during a time of rapid development in the company, which metastasized into a semi-permanent archive of all things Rhiza. Upon Nielsen's acquisition of Rhiza's, the site developed multiple audiences—Nielsen clients and internal folks both needed access to the same level of detailed documentation.
+The current Rhiza documentation site was authored and deployed by a single author as a stopgap solution during a time of rapid development in the company, which metastasized into a semi-permanent archive of all things Rhiza. Upon Nielsen's acquisition of Rhiza, the site developed multiple audiences—Nielsen clients and internal folks both needed access to the same level of detailed documentation.
 
 In order ensure Rhiza's documentation remained up-to-date for all users, I helped form a group of contributors who agreed to help our users by proactively documenting Rhiza's user interface as it changes. However, the single-authorship publishing model posed a significant hurdle to contributors.
 
