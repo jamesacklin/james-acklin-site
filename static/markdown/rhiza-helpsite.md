@@ -59,7 +59,7 @@ The team and I conducted a survey of a few static site generators and CMS-as-a-s
 ::: content
 ## Implementation
 
-Transforming a flat list of ~150 articles in a proprietary format to a nested hierarchy of Markdown files was tedious, but `pandoc` was my close friend. Once the  [Vuepress](https://vuepress.vuejs.org/) was relatively easy to get up and running, and the [default theme configuration](https://vuepress.vuejs.org/default-theme-config/) is straightforward and was perfectly adaptable to our needs.
+Transforming a flat list of ~150 articles in a proprietary format to a nested hierarchy of Markdown files was tedious, but `pandoc` was my close friend. Once the content was in order, [Vuepress](https://vuepress.vuejs.org/) was relatively easy to get up and running, and the [default theme configuration](https://vuepress.vuejs.org/default-theme-config/) is straightforward and was perfectly adaptable to our needs.
 
 The only real difficulty was engineering a Jenkins solution using Docker, but since there's no database per se, the site builds stably and reliably, triggered by checkin on the help site's `master` branch.
 :::
