@@ -13,9 +13,10 @@
     "publish": "now; now alias",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
-  "pre-commit": {
-    "lint, manifest"
-  },
+  "pre-commit": [
+    "lint",
+    "manifest"
+  ],
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.1",
     "axios": "^0.18.0",
