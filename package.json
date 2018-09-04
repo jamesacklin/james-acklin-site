@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "manifest": "node scripts/build.js",
-    "generate": "node scripts/build.js; nuxt generate",
+    "generate": "nuxt generate",
     "publish": "now; now alias",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "add": "git add ."
