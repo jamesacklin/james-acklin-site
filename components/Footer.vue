@@ -22,8 +22,8 @@ export default {
     return {
       manifest,
       social: {
-        Email: 'mailto:james.acklin@gmail.com',
-        Twitter: 'https://www.twitter.com/jamesacklin',
+        'Email': 'mailto:james.acklin@gmail.com',
+        'Twitter': 'https://www.twitter.com/jamesacklin',
         'Are.na': 'https://are.na/james-acklin/'
       }
     };

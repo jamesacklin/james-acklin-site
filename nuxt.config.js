@@ -58,7 +58,13 @@ module.exports = {
     '@nuxtjs/markdownit',
   ],
   markdownit: {
-    linkify: true
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    use: [
+      ['markdown-it-container', 'content'],
+      ['markdown-it-container', 'figure']
+    ]
   },
   css: [
     '~assets/main.css',

@@ -1,3 +1,4 @@
+::: content
 # Rhiza Explore Page
 
 <span class="gray">Designing, prototyping, and implementing an entry point for Rhiza users</span>
@@ -21,41 +22,68 @@ The user should be able to:
 ## Rough Prototyping & Primary Research
 
 We began with some low-fidelity, interactive prototypes I designed based on these notions.  This was followed by a stakeholder demonstration and review.
+:::
 
+::: figure
 ![](/images/rhiza_explore_early_prototypes.png)
 
 ![](/images/rhiza_explore_protoype_review.png)
+:::
 
+::: content
 Next, we worked on the information architecture and organization of the pre-baked stories. We expressly did not want to present users with a flat, scrolling list, so my team and I prototyped and tested a few options and reviewed the results. We learned that users preferred an unfiltered, browsable feed at first, but preferred some categorization when they were searching for a specific story.
+:::
 
+::: figure
 ![](/images/rhiza_explore_ia_prototypes.png)
 
 ![](/images/rhiza_explore_ia_review.png)
+:::
 
+::: content
 ## Concept Refinement
 
 I quickly scratched together some HTML, CSS, and JavaScript prototypes to test the interaction with semi-live data, and to demonstrate the page to developers. We found that users responded well to the initial list of categories, which they understood to be *a list of capabilities for the software itself.*
+:::
 
+::: figure
 ![](/images/rhiza_explore_html_prototypes.png)
+:::
 
+::: content
 ## Implementation
 
 The implementation phase went fairly smoothly, since we already had working HTML, CSS, and JavaScript from the previous phase. The Explorer underwent some aesthetic developments, as we received more feedback from the broader product leadership organization. We launched the MVP version of this interface and debuted at a major advertising conference, garnering lots of excitement and positive feedback from new and existing Nielsen clients.
+:::
 
+::: figure
 ![](/images/rhiza_explore_mvp.png)
+:::
 
+::: content
 ## Iterative Improvements
 
 Moving past our initial launch, we began chipping away at the features and nice-to-haves that didn't make it in to the MVP. I designed the story "cards" to reflect various states of completeness of metadata, such that they worked together as a system.
+:::
 
+::: figure
 ![](/images/rhiza_explore_state_diagrams.png)
+:::
 
+::: content
 I also designed an expand / collapse transition so the card can provide the inputs to the user in place, rather than opening a modal dialog.
+:::
 
+::: figure
 <video controls autoplay loop>
   <source src="/images/rhiza_explore_card_expand.webm" type="video/webm">
 </video>
+:::
 
+::: content
 Currently, the Explorer page is the entry point to the Rhiza system, providing our 1000+ users easy access to over 60 visualization-rich media analytics stories. It is still a work in progress, with improvements planned throughout 2018.
+:::
 
+::: figure
 ![](/images/rhiza_explore_present_day.jpg)
+:::

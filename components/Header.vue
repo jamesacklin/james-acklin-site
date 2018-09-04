@@ -43,7 +43,8 @@ export default {
       },
       projects: {
         "Rhiza": "/rhiza",
-        "Rhiza Explore Page": "/rhiza-explorer"
+        "Rhiza Explore Page": "/rhiza-explorer",
+        "Rhiza Help & Documentation Site": "/rhiza-helpsite"
       }
     };
   },

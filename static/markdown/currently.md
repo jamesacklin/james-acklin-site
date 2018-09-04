@@ -1,4 +1,9 @@
+::: content
+# Currently
+
 An attempt to keep track of what I'm working on, thinking about, designing, reading, or otherwise occupying my time with at a high level, without resorting to an entry-laden, prose-heavy "blog" format. Not strictly work-focused.
+
+---
 
 ### August 2018
 
@@ -38,3 +43,4 @@ An attempt to keep track of what I'm working on, thinking about, designing, read
 * Refactoring everything with [Tachyons](http://tachyons.io/)
 * Learning and implementing a new front-end for Rhiza using functional programming via [re-frame](https://github.com/Day8/re-frame), [ClojureScript](https://clojurescript.org/) and [React](https://reactjs.org/)
 * Working on some design projects for an American cyclocross champion bike racer
+:::

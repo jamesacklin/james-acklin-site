@@ -21,7 +21,7 @@ img, video {
 @media (min-width: 1200px){
   .rhiza-presentation-demo {
     width: 1000px;
-    margin-left: -170px;
+    /* margin-left: -170px; */
     margin-top: 4rem;
     margin-bottom: 4rem;
   }
