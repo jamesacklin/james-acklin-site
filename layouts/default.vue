@@ -25,7 +25,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="css">
 main {
   font-family: 'Work Sans';
 }

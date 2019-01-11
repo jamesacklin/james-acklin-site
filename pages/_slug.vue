@@ -1,6 +1,6 @@
 <template>
   <div :key="$route.params.slug">
-    <div v-html="content" class="lh-copy center mw-9 pa3"></div>
+    <div v-html="content.default" class="lh-copy center mw-9 pa3"></div>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   transition: 'fade',
   async asyncData({ params }) {
-    const fileContent = await import(`~/static/markdown/${params.slug}.md`)
+    const fileContent = await import(`@/static/markdown/${params.slug}.md`)
     return {
       content: fileContent
     }
@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 >>> h3 {
   font-weight: normal;
 }

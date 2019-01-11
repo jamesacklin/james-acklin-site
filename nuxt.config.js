@@ -5,41 +5,13 @@ const fs = require('fs')
 
 var files = fs.readdirSync('./static/markdown');
 
-function createRoutesArray() {
-  files.forEach(function (file) {
-      var name = file.substr(0, file.lastIndexOf('.'));
-      var route = '/' + name
-      routesArray.push(route)
-  });
-}
-
-function returnRoutes() {
-  dir.readFiles('./static/markdown', {
-        match: /.md$/,
-        shortName: true,
-        exclude: /^\./
-        }, function(err, content, next) {
-            if (err) throw err;
-            // console.log('content:', content);
-            next();
-        },
-        function(err, files){
-            if (err) throw err;
-            // fileNamesArray = [];
-            files.forEach(function (file) {
-                var name = file.substr(0, file.lastIndexOf('.'));
-                var path = '/' + name
-                return path
-            });
-        });
-}
-
 function getSlugs(post, index) {
   let slug = post.substr(0, post.lastIndexOf('.'));
   return `/${slug}`
 }
 
 module.exports = {
+  mode: 'universal',
   head: {
     htmlAttrs: {
         lang: 'en'
@@ -79,10 +51,8 @@ module.exports = {
     }
   },
   build: {
-    extend (config, { isDev, isClient }) {
-      const cssLoader = config.module.rules.find((loader) => loader.test.toString() === '/\\.css$/')
-      cssLoader.use.push('postcss-loader')
-      if (isDev && isClient) {
+    extend (config, ctx) {
+      if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
