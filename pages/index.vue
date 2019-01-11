@@ -1,11 +1,11 @@
 <template>
-  <div v-html="content.default" class="lh-copy measure-wide center mw-9 pa3">
+  <div v-html="content.default" class="lh-copy center mw-9 pa3 content">
   </div>
 </template>
 
 <script>
 export default {
-  transition: 'fade',
+  transition: "fade",
   async asyncData({ params }) {
     const fileContent = await import(`@/static/markdown/index.md`);
     return {

@@ -6,14 +6,14 @@
 
 <script>
 export default {
-  transition: 'fade',
+  transition: "fade",
   async asyncData({ params }) {
-    const fileContent = await import(`@/static/markdown/${params.slug}.md`)
+    const fileContent = await import(`@/static/markdown/${params.slug}.md`);
     return {
       content: fileContent
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="css" scoped>
@@ -33,11 +33,6 @@ export default {
   content: '→';
   position: absolute;
   left: -1.33em;
-}
-
->>> .content {
-  max-width: 34em;
-  margin: auto auto;
 }
 
 >>> .figure {

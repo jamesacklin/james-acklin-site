@@ -1,5 +1,5 @@
 <template>
-  <main class="f6 f5-ns f4-l near-black">
+  <main class="near-black">
     <site-header></site-header>
     <nuxt/>
     <site-footer></site-footer>
@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import SiteHeader from '~/components/Header.vue';
-import SiteFooter from '~/components/Footer.vue';
+import SiteHeader from "~/components/Header.vue";
+import SiteFooter from "~/components/Footer.vue";
 
 export default {
   data() {
@@ -20,8 +20,7 @@ export default {
     SiteHeader,
     SiteFooter
   },
-  beforeRouteLeave(to, from, next) {
-  }
+  beforeRouteLeave(to, from, next) {}
 };
 </script>
 

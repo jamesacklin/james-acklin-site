@@ -1,19 +1,74 @@
 /*import tachyons*/
-@import '~tachyons/css/tachyons.min.css';
+@import "~tachyons/css/tachyons.min.css";
 
 @font-face {
-  font-family: 'AUTHENTIC Sans';
+  font-family: "AUTHENTIC Sans";
   font-style: normal;
   font-weight: 500;
-  src: local('AUTHENTIC Sans'), local('AUTENTIC-Sans'),
-    url('/fonts/AUTHENTIC-Sans.woff2') format('woff2'),
-    url('/fonts/AUTHENTIC-Sans.woff') format('woff');
+  src: local("AUTHENTIC Sans"), local("AUTENTIC-Sans"),
+    url("/fonts/AUTHENTIC-Sans.woff2") format("woff2"),
+    url("/fonts/AUTHENTIC-Sans.woff") format("woff");
   font-display: swap;
 }
 
-img, video {
+img,
+video {
   max-width: 100%;
   height: auto;
+}
+
+/* Hold my beer */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+figcaption {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+@media (min-width: 800px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  figcaption {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  figcaption {
+    font-size: 1.25rem;
+  }
+}
+
+.content {
+  max-width: 34em;
+  margin: auto auto;
+  hyphens: auto;
+}
+
+@media (min-width: 1200px) {
+  .content {
+    max-width: 45em;
+  }
 }
 
 /* Art direction for specific figures */
@@ -28,7 +83,7 @@ img, video {
   display: none;
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
   .rhiza-presentation-demo {
     width: 1000px;
     /* margin-left: -170px; */
