@@ -1,6 +1,16 @@
 /*import tachyons*/
 @import '~tachyons/css/tachyons.min.css';
 
+@font-face {
+  font-family: 'AUTHENTIC Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('AUTHENTIC Sans'), local('AUTENTIC-Sans'),
+    url('/fonts/AUTHENTIC-Sans.woff2') format('woff2'),
+    url('/fonts/AUTHENTIC-Sans.woff') format('woff');
+  font-display: swap;
+}
+
 img, video {
   max-width: 100%;
   height: auto;

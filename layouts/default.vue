@@ -27,7 +27,7 @@ export default {
 
 <style lang="css">
 main {
-  font-family: 'Work Sans';
+  font-family: 'AUTHENTIC Sans', sans-serif;
 }
 a,
 .link {
