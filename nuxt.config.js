@@ -25,6 +25,7 @@ module.exports = {
   },
   modules: [
     '@nuxtjs/markdownit',
+    '@nuxtjs/pwa'
   ],
   markdownit: {
     preset: 'default',
@@ -42,9 +43,34 @@ module.exports = {
   loading: {
     color: '#9e9f89'
   },
+  manifest: {
+    name: 'James Acklin',
+    short_name: 'James Acklin',
+    description: 'Personal site for James Acklin',
+    lang: 'en-us',
+    dir: 'ltr',
+    background_color: '#fff',
+    theme_color: '#9e9f89',
+    display: 'standalone',
+    orientation: 'portrait-primary'
+  },
   generate: {
     routes: function() {
       return files.map(getSlugs)
+    },
+    cache: true,
+    html: {
+      minify: {
+        collapseBooleanAttributes: true,
+        decodeEntities: true,
+        minifyCSS: true,
+        minifyJS: true,
+        processConditionalComments: true,
+        removeEmptyAttributes: true,
+        removeRedundantAttributes: true,
+        trimCustomFragments: true,
+        useShortDoctype: true
+      }
     }
   },
   build: {
