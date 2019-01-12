@@ -22,9 +22,9 @@
         <h2>Project Samples</h2>
         <p class="lh-copy">Work samples and case studies from some projects I've completed in the recent past.</p>
         <hr class="mb3">
-        <ul class="list ma0 pa0 lh-copy">
+        <ul class="list mt3 pa0 lh-copy">
           <li v-for="(link, page, key) in projects" v-bind:key="key">
-            <nuxt-link class="nav-item db link underline-hover no-underline near-black" v-html="page" v-bind:to="link"></nuxt-link>
+            <nuxt-link class="nav-item db link underline-hover no-underline near-black mb3" v-html="page" v-bind:to="link"></nuxt-link>
           </li>
         </ul>
       </div>

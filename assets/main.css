@@ -55,7 +55,7 @@ figcaption {
   p,
   li,
   figcaption {
-    font-size: 1.25rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -65,10 +65,22 @@ figcaption {
   hyphens: auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 80px) {
   .content {
     max-width: 45em;
   }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    max-width: 60em;
+  }
+}
+
+hr {
+  height: 0;
+  border: 0;
+  border-bottom: 0.5em solid rgba(158, 159, 137, 0.5);
 }
 
 /* Art direction for specific figures */

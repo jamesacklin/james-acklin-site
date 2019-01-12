@@ -1,7 +1,8 @@
 ::: content
+
 # Rhiza Help Documentation
 
-<span class="gray">Making Rhiza's help documentation process more collaborative</span>
+Making Rhiza's help documentation process more collaborative
 
 ---
 
@@ -16,6 +17,7 @@ The site was developed in an expensive Windows documentation software solution, 
 :::
 
 ::: figure
+
 ## Existing Workflow Diagram
 
 ![](/images/helpsite-process-single.png)
@@ -30,22 +32,23 @@ Ultimately, this complex process was a non-starter for most of the team, blockin
 
 The team and I worked some positive statements that would guide our work and give us some goals to work toward.
 
-* Using a Contributor model, everyone is responsible and can contribute
-* People should only need to learn what they need to know to contribute
-* We should eliminate platform-specific tooling or proprietary commercial solutions
-* Migrate locked-format content to open, plain-text document format
-* Keep the entire project web-based—no desktop tooling
-* Use free or low-cost tools to avoid contract lock-in
-* Abstract or automate as much technical plumbing as possible
-* Keep the project "in-house:" anyone on the team can deploy
-* Train contributors on the basic Github Pull Request workflow, which is extensible to other career paths
-:::
+- Using a Contributor model, everyone is responsible and can contribute
+- People should only need to learn what they need to know to contribute
+- We should eliminate platform-specific tooling or proprietary commercial solutions
+- Migrate locked-format content to open, plain-text document format
+- Keep the entire project web-based—no desktop tooling
+- Use free or low-cost tools to avoid contract lock-in
+- Abstract or automate as much technical plumbing as possible
+- Keep the project "in-house:" anyone on the team can deploy
+- Train contributors on the basic Github Pull Request workflow, which is extensible to other career paths
+  :::
 
 ::: figure
 ![](/images/helpsite-process-multi.png)
 :::
 
 ::: content
+
 ## Solution Auditing
 
 The team and I conducted a survey of a few static site generators and CMS-as-a-service offerings. We ultimately decided to maintain our own build infrastructure and host our code on Github, along with the main Rhiza source code.
@@ -57,6 +60,7 @@ The team and I conducted a survey of a few static site generators and CMS-as-a-s
 :::
 
 ::: content
+
 ## Implementation
 
 Transforming a flat list of ~150 articles in a proprietary format to a nested hierarchy of Markdown files was tedious, but `pandoc` was my close friend. Once the content was in order, [Vuepress](https://vuepress.vuejs.org/) was relatively easy to get up and running, and the [default theme configuration](https://vuepress.vuejs.org/default-theme-config/) is straightforward and was perfectly adaptable to our needs.
@@ -65,6 +69,7 @@ The only real difficulty was engineering a Jenkins solution using Docker, but si
 :::
 
 ::: content
+
 ## Result
 
 As a result, Rhiza now has an up-to-date documentation site, built atop open formats, and generated using open-source tools on our own infrastructure. Team members regularly update the site with each release, and clients can find help articles relating to their specific issue.
@@ -75,6 +80,7 @@ As a result, Rhiza now has an up-to-date documentation site, built atop open for
 :::
 
 ::: content
+
 ## Future Work
 
 Our data and development teams are slowly building more automated content integrations into their processes, such that as the application changes, the documentation automatically evolves along with it. Examples of such integrations include using [Storybook](https://storybook.js.org/)-authored components with docstrings, and updating data documentation files during ETL workflows.
