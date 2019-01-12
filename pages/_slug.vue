@@ -2,7 +2,7 @@
   <div :key="$route.params.slug">
     <div v-html="content.default" @mouseover="showImage" @mouseout="resetImage" @touchstart="showImage" @touchend="resetImage" :class="[{overlay: viewImage}, 'lh-copy center mw-9 pa3']"></div>
     <div class="imageHolder" v-if="this.viewImage">
-      <img :src="this.viewImage" />
+      <img v-lazy="this.viewImage" />
     </div>
   </div>
 </template>

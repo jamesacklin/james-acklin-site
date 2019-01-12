@@ -40,6 +40,8 @@ module.exports = {
     '~assets/main.css',
     '~assets/transition.css'
   ],
+  css: ["~assets/main.css", "~assets/transition.css"],
+  plugins: [{ src: "~/plugins/vue-lazy.js", ssr: false }],
   loading: {
     color: '#9e9f89'
   },
