@@ -1,6 +1,7 @@
 {
   "name": "jamesacklin",
-  "alias": ["jamesacklin.com", "www.jamesacklin.com"],
+  "version": 1,
+  "alias": ["ackl.in", "jamesacklin.com", "www.jamesacklin.com"],
   "files": ["dist"],
   "type": "static",
   "static": {
