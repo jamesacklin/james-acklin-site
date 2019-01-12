@@ -1,27 +1,27 @@
 <template>
   <main class="near-black">
-    <site-header></site-header>
-    <nuxt/>
-    <site-footer></site-footer>
+    <site-header />
+    <nuxt />
+    <site-footer />
   </main>
 </template>
 
 <script>
-import SiteHeader from "~/components/Header.vue";
-import SiteFooter from "~/components/Footer.vue";
+import SiteHeader from '~/components/Header.vue'
+import SiteFooter from '~/components/Footer.vue'
 
 export default {
-  data() {
-    return {
-      navHeight: null
-    };
-  },
   components: {
     SiteHeader,
     SiteFooter
   },
+  data() {
+    return {
+      navHeight: null
+    }
+  },
   beforeRouteLeave(to, from, next) {}
-};
+}
 </script>
 
 <style lang="css">

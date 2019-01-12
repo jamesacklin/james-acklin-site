@@ -1,18 +1,20 @@
 <template>
-  <div v-html="content.default" class="lh-copy center mw-9 pa3 content">
-  </div>
+  <div
+    class="lh-copy center mw-9 pa3 content"
+    v-html="content.default"
+  />
 </template>
 
 <script>
 export default {
-  transition: "fade",
+  transition: 'fade',
   async asyncData({ params }) {
-    const fileContent = await import(`@/static/markdown/index.md`);
+    const fileContent = await import(`@/static/markdown/index.md`)
     return {
       content: fileContent
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="css" scoped>
@@ -87,6 +89,4 @@ export default {
 >>> footer :target {
   background: rgba(158, 159, 137, 0.25);
 }
-
-
 </style>

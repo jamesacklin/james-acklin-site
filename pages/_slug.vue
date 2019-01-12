@@ -1,8 +1,18 @@
 <template>
   <div :key="$route.params.slug">
-    <div v-html="content.default" @mouseover="showImage" @mouseout="resetImage" @touchstart="showImage" @touchend="resetImage" :class="[{overlay: viewImage}, 'lh-copy center mw-9 pa3']"></div>
-    <div class="imageHolder" v-if="this.viewImage">
-      <img v-lazy="this.viewImage" />
+    <div
+      :class="[{ overlay: viewImage }, 'lh-copy center mw-9 pa3']"
+      @mouseover="showImage"
+      @mouseout="resetImage"
+      @touchstart="showImage"
+      @touchend="resetImage"
+      v-html="content.default"
+    />
+    <div
+      v-if="viewImage"
+      class="imageHolder"
+    >
+      <img v-lazy="viewImage">
     </div>
   </div>
 </template>

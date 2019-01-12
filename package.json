@@ -11,7 +11,8 @@
     "pregenerate": "node scripts/build.js",
     "generate": "nuxt generate",
     "publish": "now; now alias",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "fix-code": "prettier-eslint --write '**/*.{js,jsx,vue}' "
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.3",
@@ -36,6 +37,8 @@
     "eslint-loader": "^2.1.1",
     "eslint-plugin-prettier": "3.0.1",
     "eslint-plugin-vue": "^5.0.0",
-    "prettier": "1.15.3"
+    "prettier": "1.15.3",
+    "prettier-eslint": "^8.8.2",
+    "prettier-eslint-cli": "^4.7.1"
   }
 }
