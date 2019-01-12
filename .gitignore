@@ -9,3 +9,6 @@ npm-debug.log
 
 # Nuxt generate
 dist
+manifest.json
+static/sw.js
+manifest.json

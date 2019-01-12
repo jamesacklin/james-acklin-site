@@ -1,33 +1,32 @@
 <template>
-  <main class="f6 f5-ns f4-l near-black">
-    <site-header></site-header>
-    <nuxt/>
-    <site-footer></site-footer>
+  <main class="near-black">
+    <site-header />
+    <nuxt />
+    <site-footer />
   </main>
 </template>
 
 <script>
-import SiteHeader from '~/components/Header.vue';
-import SiteFooter from '~/components/Footer.vue';
+import SiteHeader from '~/components/Header.vue'
+import SiteFooter from '~/components/Footer.vue'
 
 export default {
-  data() {
-    return {
-      navHeight: null
-    };
-  },
   components: {
     SiteHeader,
     SiteFooter
   },
-  beforeRouteLeave(to, from, next) {
-  }
-};
+  data() {
+    return {
+      navHeight: null
+    }
+  },
+  beforeRouteLeave(to, from, next) {}
+}
 </script>
 
-<style>
+<style lang="css">
 main {
-  font-family: 'Work Sans';
+  font-family: 'AUTHENTIC Sans', sans-serif;
 }
 a,
 .link {

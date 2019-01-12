@@ -5,10 +5,10 @@ var manifest = require('../manifest')
 
 updateManifest()
 
-function updateManifest () {
+function updateManifest() {
   var file = path.join(__dirname, '../manifest.json')
   var content = manifest
   content.updated = new Date()
 
-  fs.writeFileSync(file, JSON.stringify(content, { }, 2))
+  fs.writeFileSync(file, JSON.stringify(content, {}, 2))
 }

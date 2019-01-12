@@ -1,7 +1,8 @@
 ::: content
+
 # Rhiza
 
-<span class="gray">Design for Nielsen's all-in-one, local media-friendly data delivery and analytics webapp</span>
+Design for Nielsen's all-in-one, local media-friendly data delivery and analytics webapp
 
 ---
 
@@ -11,6 +12,7 @@ I've been at Rhiza (and now Nielsen) since late 2013, first as a front-end devel
 :::
 
 ::: figure
+
 <div class="rhiza-presentation-demo">
   <img src="/images/rhiza_general_editor.jpg" alt="">
   <video src="/images/rhiza_general_editor_scroll.mp4" autoplay loop></video>
@@ -18,6 +20,7 @@ I've been at Rhiza (and now Nielsen) since late 2013, first as a front-end devel
 :::
 
 ::: content
+
 ## Collaborative Human-Centered Design Exercises
 
 At Nielsen, I frequently conduct human-centered design exercises, intended to harness the team's creativity and address human needs and interests. I tend to involve as many real users as early as possible in the process, eventually moving to the team where we can build interesting and tailor-made solutions for the exact users we serve.
@@ -39,6 +42,7 @@ Customer Journey Maps detail the arc of engagement a user (or potential user) ha
 :::
 
 ::: content
+
 ## Research, Prototyping, and Reviews
 
 I document my approach to nearly every project as an initial presentation to stakeholders. Then, I conduct primary research and construct rough-and-ready prototypes of varying degrees of fidelity. I then test with as many real users (or proxies) as possible and adjust the prototypes as necessary. Lastly, I typically roll my approach for the project, the results of my tests, and my recommendations moving forward into a design review with as many parties as necessary.
@@ -53,6 +57,7 @@ Below is a working prototype (<a href="https://xd.adobe.com/view/4e7dd85f-2091-4
 :::
 
 ::: content
+
 ## Prototyping and Specification Diagramming
 
 I prefer to involve developers as closely as possible in the prototyping phase of each project, such that the prototype becomes a design artifact in and of itself. However, I do generate lots of specifications along the way, diagramming interactions and the desired result.
