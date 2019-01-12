@@ -34,7 +34,7 @@ An attempt to keep track of what I'm working on, thinking about, designing, read
 
 - Designing a [logo](/images/currently/2018/ssc-logo.png) for [Steady State Cycles](https://steadystatecycles.com/), a high-end road and mountain bike shop owned by some friends in Pittsburgh
 - Developing some UX improvements to [Dirt Rag Magazine](http://dirtragmag.com/) via Vue components and the WP-JSON API, extending the shelf life of their purchased premium Wordpress theme until it's time for a full redesign
-- Riding the scenic roads and sketchy single-track trails of the Pioneer Valley of Western Massachusetts for the [JAM Fund Grand FUNdo](/images/currently/fundo-poster.png)
+- Riding the scenic roads and sketchy single-track trails of the Pioneer Valley of Western Massachusetts for the [JAM Fund Grand FUNdo](/images/currently/2018/fundo-poster.png)
 
 ### June 2018
 
@@ -48,7 +48,7 @@ An attempt to keep track of what I'm working on, thinking about, designing, read
 - Designing an [outdoor room](http://www.iwritewordsgood.com/apl/patterns/apl163.htm) and [half-hidden garden](http://www.iwritewordsgood.com/apl/patterns/apl111.htm) with a [garden seat](http://www.iwritewordsgood.com/apl/patterns/apl176.htm) and [paving with cracks between the stones](http://www.iwritewordsgood.com/apl/patterns/apl247.htm)
 - Subsequently understanding why interaction designers love Christopher Alexander and why architects loathe him
 - Visiting Los Angeles for the first time
-- Creating a poster for the [JAM Fund Grand FUNdo](/images/currently/fundo-poster.png), a bike ride benefitting the premier cyclocross development program in the US
+- Creating a poster for the [JAM Fund Grand FUNdo](/images/currently/2018/fundo-poster.png), a bike ride benefitting the premier cyclocross development program in the US
 - Reading Michael Sorkin's "[Exquisite Corpse: Writing on Buildings](https://www.versobooks.com/books/778-exquisite-corpse)" and [collecting references](https://www.are.na/james-acklin/exquisite-corpse-references)
 
 ### April 2018
