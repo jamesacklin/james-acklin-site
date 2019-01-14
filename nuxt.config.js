@@ -27,7 +27,11 @@ module.exports = {
       }
     ]
   },
-  modules: ['@nuxtjs/markdownit', '@nuxtjs/pwa'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/markdownit', '@nuxtjs/pwa'],
+  axios: {
+    https: true,
+    progress: true
+  },
   markdownit: {
     preset: 'default',
     linkify: true,

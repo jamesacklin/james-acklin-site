@@ -10,14 +10,17 @@
       </small>
     </p>
     <hr>
-    <ul class="list">
+    <ul
+      v-if="readingList"
+      class="list"
+    >
       <li
         v-for="item in readingList"
         :key="item.id"
       >
         <a
           class="no-underline underline-hover"
-          :href="item.source.url"
+          :href="link(item)"
         >
           {{ item.title }}
         </a>
@@ -28,19 +31,31 @@
 </template>
 
 <script>
-const axios = require('axios')
 
 export default {
   transition: 'fade',
-
-  asyncData({ req, params }) {
-    return axios
-      .get('https://api.are.na/v2/channels/reading-1527615453?per=10000')
-      .then(res => {
-        return {
-          readingList: res.data.contents.reverse().slice(0, 5)
-        }
-      })
+  async asyncData({ payload, isStatic, store, params }) {
+    if (payload && isStatic){
+      store.commit('addReadingList', [payload])
+    } else {
+      await store.dispatch('getList', params)
+    }
+  },
+  computed: {
+    readingList() {
+      return this.$store.getters.getReadingList
+    }
+  },
+  methods: {
+    link: function(item){
+      if (item.source){
+        return item.source.url
+      } else if (item.attachment){
+        return item.attachment.url
+      } else {
+        return ''
+      }
+    }
   }
 }
 </script>

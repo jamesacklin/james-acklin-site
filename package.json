@@ -15,6 +15,7 @@
     "fix-code": "prettier-eslint --write '**/*.{js,jsx,vue}' "
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/markdownit": "^1.2.3",
     "@nuxtjs/pwa": "^2.6.0",
     "axios": "^0.18.0",
