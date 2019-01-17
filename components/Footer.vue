@@ -21,7 +21,7 @@
             class="link underline-hover"
             :href="link"
           >
-            {{ service }}
+            {{ service }} &rarr;
           </a>
         </li>
       </ul>
@@ -36,8 +36,8 @@ export default {
     return {
       manifest,
       social: {
-        Email: 'mailto:james.acklin@gmail.com',
-        Twitter: 'https://www.twitter.com/jamesacklin',
+        'Email': 'mailto:james.acklin@gmail.com',
+        'GitHub': 'https://www.github.com/jamesacklin',
         'Are.na': 'https://are.na/james-acklin/'
       }
     }
