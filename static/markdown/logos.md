@@ -2,7 +2,9 @@
 
 # Logo Work
 
-Occasionally, I make logos for small businesses that can't afford to go through the same exercise The Big Branding Firm or have something to offer in trade. I typically deliver everything in multiple colors, a style guide, and everything they need to present well.
+Occasionally, I make logos for small businesses that can't afford to have a junior designer at A Large Branding Firm go through the same exercise at a 200% hourly markup. I typically deliver everything in multiple colors, a style guide, and everything they need to present well.
+
+These people are mostly friends.
 
 ---
 
