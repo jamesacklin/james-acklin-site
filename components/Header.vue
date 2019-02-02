@@ -74,9 +74,10 @@ export default {
         Currently: '/currently'
       },
       projects: {
-        Rhiza: '/rhiza',
+        'Rhiza': '/rhiza',
         'Rhiza Explore Page': '/rhiza-explorer',
-        'Rhiza Help & Documentation Site': '/rhiza-helpsite'
+        'Rhiza Help & Documentation Site': '/rhiza-helpsite',
+        'Logo Work': '/logos'
       }
     }
   },
