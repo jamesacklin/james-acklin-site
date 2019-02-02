@@ -38,7 +38,8 @@ module.exports = {
     breaks: true,
     use: [
       ['markdown-it-container', 'content'],
-      ['markdown-it-container', 'figure']
+      ['markdown-it-container', 'figure'],
+      ['markdown-it-container', 'logo-parade']
     ]
   },
   css: ['~assets/main.css', '~assets/transition.css'],

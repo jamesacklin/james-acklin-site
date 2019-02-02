@@ -109,4 +109,23 @@ export default {
   text-align: left;
   margin: 3em auto;
 }
+
+>>> .logo-parade {
+  max-width: 40em;
+  margin: 0 auto;
+}
+
+>>> .logo-parade p {
+  margin: 6em 0;
+}
+
+>>> .logo-parade p:nth-child(4),
+>>> .logo-parade p:nth-child(5) {
+  padding: 0 15%;
+}
+
+>>> .logo-parade p:nth-child(7),
+>>> .logo-parade p:nth-child(9) {
+  padding: 0 25%;
+}
 </style>
