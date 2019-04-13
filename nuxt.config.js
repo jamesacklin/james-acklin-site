@@ -1,3 +1,8 @@
+import implicitFigures from "markdown-it-implicit-figures";
+import namedHeadings from "markdown-it-named-headings";
+import modifyToken from "markdown-it-modify-token";
+import footnote from "markdown-it-footnote";
+
 module.exports = {
   head: {
     htmlAttrs: {
@@ -26,28 +31,41 @@ module.exports = {
       }
     ]
   },
+  modules: [
+    [
+      "@nuxtjs/markdownit",
+      {
+        html: true,
+        linkify: true,
+        use: [implicitFigures, namedHeadings, modifyToken, footnote]
+      }
+    ]
+  ],
   plugins: [],
   css: [],
-  loading: { color: "#000000" },
-  build: {
-    postcss: {
-      plugins: {},
-      preset: {
-        autoprefixer: {
-          grid: true
-        }
-      }
-    },
-    extractCSS: true,
-    extend(config, ctx) {
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: "pre",
-          test: /\.(js|vue)$/,
-          loader: "eslint-loader",
-          exclude: /(node_modules)/
-        });
-      }
-    }
-  }
+  loading: { color: "#000000" }
+  // build: {
+  //   postcss: {
+  //     plugins: {},
+  //     preset: {
+  //       autoprefixer: {
+  //         grid: true
+  //       }
+  //     }
+  //   },
+  //   extractCSS: true,
+  //   extend(config, ctx) {
+  //     if (ctx.isDev && ctx.isClient) {
+  //       config.module.rules.push({
+  //         enforce: "pre",
+  //         test: /\.(js|vue)$/,
+  //         loader: "eslint-loader",
+  //         exclude: /(node_modules)/,
+  //         options: {
+  //           fix: true
+  //         }
+  //       });
+  //     }
+  //   }
+  // }
 };
