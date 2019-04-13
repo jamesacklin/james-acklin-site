@@ -4,17 +4,17 @@
       <em>you are chilling out in offline mode</em>
     </div>
     <main>
-      <navigation />
+      <Navigation />
       <nuxt />
     </main>
   </div>
 </template>
 
 <script>
-import navigation from "@/components/navigation";
+import Navigation from "@/components/Navigation";
 export default {
   components: {
-    navigation
+    Navigation
   }
 };
 </script>

@@ -20,7 +20,7 @@ export default {
 <style scoped>
 header {
   display: grid;
-  grid-gap: 1rem;
+  column-gap: 1rem;
   grid-template-columns: repeat(12, 1fr);
   padding: 1rem 1rem 4rem 1rem;
   margin-top: -0.3rem;
