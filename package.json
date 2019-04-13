@@ -11,7 +11,8 @@
     "generate": "nuxt generate",
     "build-analyze": "nuxt build --analyze",
     "lint": "eslint --ext .js,.vue .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "now-build": "nuxt generate"
   },
   "dependencies": {
     "markdown-it": "^8.4.2",
@@ -25,6 +26,7 @@
     "vuex": "^3.1.0"
   },
   "devDependencies": {
+    "@nuxt/webpack": "^2.6.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-config-prettier": "^4.1.0",
