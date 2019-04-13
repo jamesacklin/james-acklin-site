@@ -1,23 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      ["
-      <router-link to="/">Home</router-link>",
-      "
-      <router-link to="/about">About</router-link>"]
+    <div v-if="$nuxt.isOffline">
+      <em>you are chilling out in offline mode</em>
     </div>
-    <router-view/>
+    <navigation />
+    <nuxt />
   </div>
 </template>
 
-<style>
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i");
+<script>
+import navigation from "@/components/navigation";
+export default {
+  components: {
+    navigation
+  }
+};
+</script>
 
+<style>
 :root {
   --bgcolor: 255, 255, 255;
   --textcolor: 0, 0, 0;
   --sans: sans-serif;
   --mono: "IBM Plex Mono", menlo, monaco, monospace;
+  --normal: 300;
 }
 
 *,
@@ -29,7 +35,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "kern" 1;
@@ -60,7 +66,7 @@ h2,
 h3,
 h4 {
   font-size: inherit;
-  font-weight: normal;
+  font-weight: var(--normal);
 }
 
 a {
