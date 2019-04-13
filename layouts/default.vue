@@ -3,8 +3,10 @@
     <div v-if="$nuxt.isOffline">
       <em>you are chilling out in offline mode</em>
     </div>
-    <navigation />
-    <nuxt />
+    <main>
+      <navigation />
+      <nuxt />
+    </main>
   </div>
 </template>
 
@@ -59,6 +61,21 @@ body {
 }
 ::selection {
   background: rgba(127, 127, 127, 0.5);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-bottom: 4rem;
 }
 
 h1,
