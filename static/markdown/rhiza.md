@@ -2,8 +2,6 @@
 
 Design for Nielsen's all-in-one, local media-friendly data delivery and analytics webapp
 
----
-
 Rhiza is a data analytics, visualization, and media research software platform, spun off from MAYA Design in 2006 and acquired by Nielsen in 2017. It seeks to make complex data operations and visualization techniques actionable for media salespeople and the research teams that support them. It also contains a powerful mapping component and exports to PowerPoint.
 
 I've been at Rhiza (and now Nielsen) since late 2013, first as a front-end developer, and eventually moving into UX research and design. I've had a major hand in the design and implementation of several major features; this is an overview of my day-to-day responsibilities and work. If you'd like to see a case study in greater detail, check out the [Explore Page project](/rhiza-explorer).
@@ -43,8 +41,6 @@ I prefer to involve developers as closely as possible in the prototyping phase o
 
 Below are two examples of design artifacts: a video recording of a click-through prototype demonstrating the desired, typical use of an admin tool, and diagrams detailing how each widget should work.
 
-<video loop autoplay controls class="admin-demo">
-  <source src="/images/rhiza_admin_interface.mp4" type="video/mp4">
-</video>
+![Admin Interface](/images/rhiza_admin_interface.mp4)
 
 ![](/images/rhiza_general_admin_diagrams.jpg)

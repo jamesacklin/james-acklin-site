@@ -2,8 +2,6 @@
 
 An attempt to keep track of what I'm working on, thinking about, designing, reading, or otherwise occupying my time with at a high level, without resorting to an entry-laden, prose-heavy "blog" format. Not strictly work-focused.
 
----
-
 ## December 2018
 
 - Reflecting upon and learning from a year of intense personal and professional development

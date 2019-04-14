@@ -4,8 +4,6 @@ Occasionally, I make logos for small businesses that can't afford to have a juni
 
 These people are mostly friends.
 
----
-
 ![](/images/logo-work/ssc.svg)
 
 ![](/images/logo-work/bi.svg)

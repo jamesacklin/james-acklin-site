@@ -2,8 +2,6 @@
 
 Making Rhiza's help documentation process more collaborative
 
----
-
 ## Problem Definition
 
 The current Rhiza documentation site was authored and deployed by a single author as a stopgap solution during a time of rapid development in the company, which metastasized into a semi-permanent archive of all things Rhiza. Upon Nielsen's acquisition of Rhiza, the site developed multiple audiences—Nielsen clients and internal folks both needed access to the same level of detailed documentation.
@@ -12,9 +10,9 @@ In order ensure Rhiza's documentation remained up-to-date for all users, I helpe
 
 The site was developed in an expensive Windows documentation software solution, and all of Rhiza's documentation was locked away in a proprietary format. Training a team of 5 to use this documentation software posed an expensive and time-consuming challenge—not only would it be costly to license the software itself, each contributor would need to run a Windows Virtual Machine on their computer.
 
-## Existing Workflow Diagram
-
 ![](/images/helpsite-process-single.png)
+
+## Existing Workflow
 
 Not only was the authorship model a challenge, preserving the existing order required each contributor to follow a detailed checklist of fairly technical steps with a large penalty for error. Furthermore, ultimately deploying the built site was beholden to an dev/ops engineer's schedule and interest.
 

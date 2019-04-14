@@ -2,8 +2,6 @@
 
 Designing, prototyping, and implementing an entry point for Rhiza users
 
----
-
 ## Problem Definition
 
 Rhiza is a very powerful data analytics and visualization tool, but due to its near-infinite flexibility, it comes with a significant learning curve. During the course of this project, I sought to design a way for new or inexperienced users to get access to the same interesting, valuable data-driven stories as experienced researchers.
@@ -53,9 +51,7 @@ Moving past our initial launch, we began chipping away at the features and nice-
 
 I also designed an expand / collapse transition so the card can provide the inputs to the user in place, rather than opening a modal dialog.
 
-<video controls autoplay loop>
-  <source src="/images/rhiza_explore_card_expand.webm" type="video/webm">
-</video>
+![](/images/rhiza_explore_card_expand.webm)
 
 Currently, the Explorer page is the entry point to the Rhiza system, providing our 1000+ users easy access to over 60 visualization-rich media analytics stories. It is still a work in progress, with improvements planned throughout 2018.
 
