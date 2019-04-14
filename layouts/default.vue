@@ -75,7 +75,7 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-bottom: 4rem;
+  padding: 1rem 1rem 4rem 1rem;
 }
 
 h1,

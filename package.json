@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.3",
+    "@nuxtjs/pwa": "^3.0.0-beta.14",
     "markdown-it": "^8.4.2",
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-html5-embed": "^1.0.0",
@@ -31,6 +32,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.1.0",
+    "eslint-loader": "^2.1.2",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-vue": "^5.0.0",
     "vue-template-compiler": "^2.6.10"

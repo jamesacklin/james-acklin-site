@@ -12,9 +12,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.entry {
-  padding: 1rem;
-}
-</style>

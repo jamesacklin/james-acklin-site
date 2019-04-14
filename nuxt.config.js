@@ -2,8 +2,17 @@ import implicitFigures from "markdown-it-implicit-figures";
 import namedHeadings from "markdown-it-named-headings";
 import modifyToken from "markdown-it-modify-token";
 import footnote from "markdown-it-footnote";
+const fs = require("fs");
+
+const files = fs.readdirSync("./static/markdown");
+
+function getSlugs(post) {
+  let slug = post.substr(0, post.lastIndexOf("."));
+  return `/${slug}`;
+}
 
 module.exports = {
+  mode: "universal",
   head: {
     htmlAttrs: {
       lang: "en-us"
@@ -16,7 +25,7 @@ module.exports = {
       {
         hid: "description",
         name: "description",
-        content: "James Acklin, designer and front-end developer in Pittsburgh, PA"
+        content: "James Acklin, designer +  developer"
       }
     ],
     link: [
@@ -32,6 +41,7 @@ module.exports = {
     ]
   },
   modules: [
+    "@nuxtjs/pwa",
     [
       "@nuxtjs/markdownit",
       {
@@ -44,6 +54,36 @@ module.exports = {
   plugins: [],
   css: [],
   loading: { color: "#000000" },
+  manifest: {
+    name: "James Acklin",
+    short_name: "ja",
+    description: "James Acklin, designer + developer",
+    lang: "en-us",
+    dir: "ltr",
+    background_color: "#FFF",
+    theme_color: "#000",
+    display: "standalone",
+    orientation: "portrait-primary"
+  },
+  generate: {
+    routes: function() {
+      return files.map(getSlugs);
+    },
+    cache: true,
+    html: {
+      minify: {
+        collapseBooleanAttributes: true,
+        decodeEntities: true,
+        minifyCSS: true,
+        minifyJS: true,
+        processConditionalComments: true,
+        removeEmptyAttributes: true,
+        removeRedundantAttributes: true,
+        trimCustomFragments: true,
+        useShortDoctype: true
+      }
+    }
+  },
   build: {
     postcss: {
       plugins: {},
