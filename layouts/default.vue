@@ -23,9 +23,10 @@ export default {
 :root {
   --bgcolor: 255, 255, 255;
   --textcolor: 0, 0, 0;
-  --sans: sans-serif;
+  --sans: "Work Sans", sans-serif;
   --mono: "IBM Plex Mono", menlo, monaco, monospace;
-  --normal: 300;
+  --light: 300;
+  --normal: 400;
 }
 
 *,
@@ -37,7 +38,7 @@ export default {
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "kern" 1;
@@ -53,7 +54,7 @@ body {
   color: rgb(var(--textcolor));
   font-size: 1rem;
   line-height: 1.5;
-  font-family: var(--mono);
+  font-family: var(--sans);
 }
 
 ::-moz-selection {
@@ -86,7 +87,17 @@ h4 {
   font-weight: var(--normal);
 }
 
+p {
+  font-size: inherit;
+  font-weight: var(--normal);
+}
+
 a {
   color: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
 }
 </style>

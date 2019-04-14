@@ -36,7 +36,7 @@ module.exports = {
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,300i"
+        href: "https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,300i|Work+Sans:400"
       }
     ]
   },

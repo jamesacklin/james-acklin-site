@@ -6,7 +6,7 @@
       <br />
       <nuxt-link to="/about">about page</nuxt-link>
       <br />
-      <nuxt-link to="/hello">hello.md</nuxt-link>
+      <nuxt-link to="/rhiza">rhiza</nuxt-link>
     </div>
   </header>
 </template>
