@@ -1,6 +1,10 @@
 <template>
   <div class="content entry">
-    <!-- <div v-html="$md.render(model)"></div> -->
+    <div v-if="fm" class="entry-meta">
+      <h1 v-if="fm.title" v-html="fm.title" />
+      <p v-if="fm.description" v-html="fm.description" />
+      <hr />
+    </div>
     <div v-html="content"></div>
   </div>
 </template>
@@ -11,6 +15,7 @@ import html5embed from "markdown-it-html5-embed";
 import namedHeadings from "markdown-it-named-headings";
 import modifyToken from "markdown-it-modify-token";
 import footnote from "markdown-it-footnote";
+import * as matter from "gray-matter";
 
 const md = require("markdown-it")({
   html: true,
@@ -49,8 +54,10 @@ const md = require("markdown-it")({
 export default {
   async asyncData({ params }) {
     const fileContent = await import(`@/static/markdown/${params.slug}.md`);
+    const matterd = matter(fileContent.default);
     return {
-      content: md.render(fileContent.default)
+      fm: matterd.data,
+      content: md.render(matterd.content)
     };
   }
 };

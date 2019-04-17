@@ -1,6 +1,7 @@
-# Rhiza
-
-Design for Nielsen's all-in-one, local media-friendly data delivery and analytics webapp
+---
+title: Rhiza
+description: Design for Nielsen's all-in-one, local media-friendly data delivery and analytics webapp
+---
 
 Rhiza is a data analytics, visualization, and media research software platform, spun off from MAYA Design in 2006 and acquired by Nielsen in 2017. It seeks to make complex data operations and visualization techniques actionable for media salespeople and the research teams that support them. It also contains a powerful mapping component and exports to PowerPoint.
 
