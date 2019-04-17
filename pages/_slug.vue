@@ -1,18 +1,56 @@
 <template>
   <div class="content entry">
-    <div class="text" v-html="content"></div>
+    <!-- <div v-html="$md.render(model)"></div> -->
+    <div v-html="content"></div>
   </div>
 </template>
 
 <script>
+import implicitFigures from "markdown-it-implicit-figures";
+import html5embed from "markdown-it-html5-embed";
+import namedHeadings from "markdown-it-named-headings";
+import modifyToken from "markdown-it-modify-token";
+import footnote from "markdown-it-footnote";
+
+const md = require("markdown-it")({
+  html: true,
+  linkify: true,
+  typographer: true,
+  quotes: "“”‘’"
+})
+  .use(implicitFigures)
+  .use(html5embed, {
+    useImageSyntax: false,
+    useLinkSyntax: true,
+    isAllowedHttp: true,
+    renderFn(properties) {
+      switch (properties.mediaType) {
+        case "video":
+          return `<figure class="video">
+                      <video
+                        data-src="${properties.url}"
+                        poster="${properties.url.replace(".mp4", ".jpg")}"
+                        preload="none"
+                        autoplay
+                        loop
+                        controls="false"
+                      ></video>
+                    </figure>
+                  `;
+        case "audio":
+          return `<audio src="${properties.url}" controls></audio>`;
+      }
+    }
+  })
+  .use(namedHeadings)
+  .use(modifyToken)
+  .use(footnote);
+
 export default {
   async asyncData({ params }) {
     const fileContent = await import(`@/static/markdown/${params.slug}.md`);
     return {
-      content: fileContent.default.replace(
-        /<p>\s*(<figure class="video">([\s\S]*|$)<\/figure>)\s*<\/p>/g,
-        "$1"
-      )
+      content: md.render(fileContent.default)
     };
   }
 };

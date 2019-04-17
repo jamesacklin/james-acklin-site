@@ -1,8 +1,3 @@
-import implicitFigures from "markdown-it-implicit-figures";
-import html5embed from "markdown-it-html5-embed";
-import namedHeadings from "markdown-it-named-headings";
-import modifyToken from "markdown-it-modify-token";
-import footnote from "markdown-it-footnote";
 const fs = require("fs");
 
 const files = fs.readdirSync("./static/markdown");
@@ -41,51 +36,8 @@ module.exports = {
       }
     ]
   },
-  modules: [
-    "@nuxtjs/pwa",
-    [
-      "@nuxtjs/markdownit",
-      {
-        html: true,
-        linkify: true,
-        typographer: true,
-        quotes: "“”‘’",
-        use: [
-          implicitFigures,
-          namedHeadings,
-          modifyToken,
-          footnote,
-          [
-            html5embed,
-            {
-              useImageSyntax: false,
-              useLinkSyntax: true,
-              isAllowedHttp: true,
-              renderFn(properties) {
-                switch (properties.mediaType) {
-                  case "video":
-                    return `
-                    <figure class="video">
-                      <video
-                        data-src="${properties.url}"
-                        poster="${properties.url.replace(".mp4", ".jpg")}"
-                        preload="none"
-                        autoplay
-                        loop
-                        controls="false"
-                      ></video>
-                    </figure>
-                  `;
-                  case "audio":
-                    return `<audio src="${properties.url}" controls></audio>`;
-                }
-              }
-            }
-          ]
-        ]
-      }
-    ]
-  ],
+  modules: ["@nuxtjs/pwa"],
+  axios: {},
   plugins: [],
   css: [],
   loading: { color: "#000000" },
@@ -130,6 +82,11 @@ module.exports = {
     },
     extractCSS: true,
     extend(config, ctx) {
+      // Load markdown files as raw strings
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: "raw-loader"
+      });
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: "pre",
