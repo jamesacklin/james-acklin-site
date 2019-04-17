@@ -8,14 +8,11 @@ Rhiza is a very powerful data analytics and visualization tool, but due to its n
 
 Our users needed an easy starting point to the system with some pre-configured stories that are flexible enough to fulfill many common media analytics needs. The team and I specified some goals, to which anchor our work in a concrete set of requirements.
 
-<div class="bg-light-gray ph4 pv1">
-
 The user should be able to:
 
 1.  Choose a few pre-baked, data-driven stories to explore,
 2.  Fill in some easily-understood inputs to these stories, and
 3.  Peruse the the resulting visualizations or presentation.
-    </div>
 
 ## Rough Prototyping & Primary Research
 

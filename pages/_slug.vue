@@ -1,11 +1,10 @@
 <template>
   <div class="content entry">
-    <div v-if="fm" class="entry-meta">
+    <div v-if="fm" class="meta">
       <h1 v-if="fm.title" v-html="fm.title" />
       <p v-if="fm.description" v-html="fm.description" />
-      <hr />
     </div>
-    <div v-html="content"></div>
+    <div class="text" v-html="content"></div>
   </div>
 </template>
 
@@ -64,7 +63,8 @@ export default {
 </script>
 
 <style>
-.text > section {
+.text,
+.meta {
   --col: 4/10;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -76,32 +76,65 @@ export default {
   word-break: break-word;
 }
 
-.text > section > * {
+.meta {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgb(var(--textcolor));
+}
+
+.meta > * {
   align-self: start;
   grid-column: 1/13;
 }
 
-@media (min-width: 800px) {
-  .text > section > * {
-    align-self: start;
-    grid-column: 3/11;
-  }
+.text > * {
+  align-self: start;
+  grid-column: 1/13;
 }
 
-@media (min-width: 1200px) {
-  .text > section > * {
-    align-self: start;
-    grid-column: 4/10;
-  }
-}
-
-.text > section > figure {
+.text > figure {
   align-self: start;
   grid-column: 1/13;
   text-align: center;
 }
 
-.text > section > h2 {
+.text > h2 {
   margin-top: 2rem;
+}
+
+@media (min-width: 800px) {
+  .meta > *:nth-child(1) {
+    grid-column: 1/3;
+  }
+
+  .meta > *:nth-child(2) {
+    grid-column: 3/11;
+  }
+
+  .text > * {
+    grid-column: 3/11;
+  }
+}
+
+@media (min-width: 1150px) {
+  .meta > *:nth-child(1) {
+    grid-column: 1/4;
+  }
+
+  .meta > *:nth-child(2) {
+    grid-column: 4/10;
+  }
+
+  .text > * {
+    grid-column: 4/10;
+  }
+
+  .text > h2 {
+    grid-column: 1/4;
+  }
+
+  .text > h2 + * {
+    margin-top: 2rem;
+  }
 }
 </style>

@@ -1,8 +1,7 @@
-# Logo Work
-
-Occasionally, I make logos for small businesses that can't afford to have a junior designer at A Large Branding Firm go through the same exercise at a 200% hourly markup. I typically deliver everything in multiple colors, a style guide, and everything they need to present well.
-
-These people are mostly friends.
+---
+title: Logo Work
+description: Various identities I've done for friends on limited budgets and flexible timelines
+---
 
 ![](/images/logo-work/ssc.svg)
 
