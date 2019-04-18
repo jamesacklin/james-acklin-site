@@ -7,10 +7,7 @@ Rhiza is a data analytics, visualization, and media research software platform, 
 
 I've been at Rhiza (and now Nielsen) since late 2013, first as a front-end developer, and eventually moving into UX research and design. I've had a major hand in the design and implementation of several major features; this is an overview of my day-to-day responsibilities and work. If you'd like to see a case study in greater detail, check out the [Explore Page project](/rhiza-explorer).
 
-<div class="rhiza-presentation-demo">
-  <img src="/images/rhiza_general_editor.jpg" alt="">
-  <video src="/images/rhiza_general_editor_scroll.mp4" autoplay loop></video>
-</div>
+![](/images/rhiza_general_editor.jpg)
 
 ## Collaborative Human-Centered Design Exercises
 

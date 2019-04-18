@@ -93,6 +93,7 @@ export default {
 }
 
 .text > figure {
+  margin: 2rem 0;
   align-self: start;
   grid-column: 1/13;
   text-align: center;
