@@ -102,6 +102,15 @@ export default {
   margin-top: 2rem;
 }
 
+.footnotes-sep {
+  display: none;
+}
+
+.footnotes {
+  margin-top: 2rem;
+  font-size: 80%;
+}
+
 @media (min-width: 800px) {
   .meta > *:nth-child(1) {
     grid-column: 1/3;
