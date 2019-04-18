@@ -12,7 +12,6 @@
 import implicitFigures from "markdown-it-implicit-figures";
 import html5embed from "markdown-it-html5-embed";
 import namedHeadings from "markdown-it-named-headings";
-import modifyToken from "markdown-it-modify-token";
 import footnote from "markdown-it-footnote";
 import * as matter from "gray-matter";
 
@@ -47,12 +46,11 @@ const md = require("markdown-it")({
     }
   })
   .use(namedHeadings)
-  .use(modifyToken)
   .use(footnote);
 
 export default {
   async asyncData({ params }) {
-    const fileContent = await import(`@/static/markdown/${params.slug}.md`);
+    const fileContent = await import(`@/markdown/${params.slug}.md`);
     const matterd = matter(fileContent.default);
     return {
       fm: matterd.data,

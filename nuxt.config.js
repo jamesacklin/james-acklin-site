@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const files = fs.readdirSync("./static/markdown");
+const files = fs.readdirSync("./markdown");
 
 function getSlugs(post) {
   let slug = post.substr(0, post.lastIndexOf("."));

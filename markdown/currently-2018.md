@@ -8,7 +8,6 @@ An attempt to keep track of what I'm working on, thinking about, designing, read
 - Building up a neo-retro 1994 [Specialized Allez](/images/currently/2018/allez.jpg) lugged steel road bike with a modern 11-speed Shimano drivetrain
 
 ### November 2018
-
 - Conducting various human-centered design activities with the staff of [Dirt Rag Magazine](https://www.dirtragmag.com/) to define requirements for a relaunch of Dirt Rag's online publishing presence
 - Traveling to Albuquerque and Santa Fe over Thanksgiving break to experience northern New Mexico for the first time (staying at Los Poblanos historic inn in ABQ and seeing as much art as possible in Santa Fe)
 
