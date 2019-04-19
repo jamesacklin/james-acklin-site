@@ -36,8 +36,17 @@ module.exports = {
       }
     ]
   },
+  router: {
+    routes: [
+      {
+        name: "index",
+        path: "/",
+        component: "@/pages/_slug.vue",
+        props: { params: { slug: "index" } }
+      }
+    ]
+  },
   modules: ["@nuxtjs/pwa"],
-  axios: {},
   plugins: [],
   css: [],
   loading: { color: "#000000" },

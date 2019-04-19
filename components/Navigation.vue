@@ -2,11 +2,9 @@
   <header>
     <div>James Acklin</div>
     <div>
-      <nuxt-link to="/">home page</nuxt-link>
+      <nuxt-link to="/index">Index</nuxt-link>
       <br />
-      <nuxt-link to="/about">about page</nuxt-link>
-      <br />
-      <nuxt-link to="/rhiza">rhiza</nuxt-link>
+      <nuxt-link to="/currently">Currently</nuxt-link>
     </div>
   </header>
 </template>
