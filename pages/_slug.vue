@@ -50,6 +50,9 @@ const md = require("markdown-it")({
 
 export default {
   async asyncData({ params }) {
+    if (params.slug == null) {
+      params.slug = "index";
+    }
     const fileContent = await import(`@/markdown/${params.slug}.md`);
     const matterd = matter(fileContent.default);
     return {

@@ -30,4 +30,18 @@ header > div:nth-child(1) {
 header > div:nth-child(2) {
   grid-column: 7 / 12;
 }
+
+a {
+  text-decoration: none;
+}
+
+.nuxt-link-active {
+  position: relative;
+}
+
+.nuxt-link-active:before {
+  content: "→";
+  position: absolute;
+  left: -1.5em;
+}
 </style>
