@@ -13,3 +13,5 @@ I'm currently interested in the following:
 - Design systems and syndicating front-end component frameworks
 
 Occasionally I conduct branding exercises, help software companies and websites with interaction design problems, and do general graphic design work on the side. [Email me](mailto:jamesacklin@gmail.com) if you'd like to work on a project&nbsp;together.
+
+![](/apple-touch-icon.png)
