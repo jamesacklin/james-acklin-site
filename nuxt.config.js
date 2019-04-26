@@ -13,7 +13,7 @@ module.exports = {
     htmlAttrs: {
       lang: "en-us"
     },
-    title: "James Acklin",
+    title: "Index",
     titleTemplate: "%s - James Acklin",
     meta: [
       { charset: "utf-8" },
@@ -36,7 +36,20 @@ module.exports = {
       }
     ]
   },
-  router: {},
+  router: {
+    routes: [
+      {
+        path: "/",
+        redirect: {
+          name: "index"
+        }
+      },
+      {
+        path: "/index",
+        name: "index"
+      }
+    ]
+  },
   modules: ["@nuxtjs/pwa"],
   plugins: [],
   css: [],
@@ -50,7 +63,19 @@ module.exports = {
     background_color: "#FFF",
     theme_color: "#000",
     display: "standalone",
-    orientation: "portrait-primary"
+    orientation: "portrait-primary",
+    icons: [
+      {
+        src: "/android-chrome-192x192.png",
+        sizes: "192x192",
+        type: "image/png"
+      },
+      {
+        src: "/android-chrome-512x512.png",
+        sizes: "512x512",
+        type: "image/png"
+      }
+    ]
   },
   generate: {
     routes: function() {

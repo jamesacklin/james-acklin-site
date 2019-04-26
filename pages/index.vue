@@ -1,5 +1,7 @@
 <script>
-import slugView from "~/pages/_slug.vue";
-
-export default slugView;
+export default {
+  fetch({ redirect }) {
+    redirect(301, "/index");
+  }
+};
 </script>
