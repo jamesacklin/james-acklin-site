@@ -1,131 +1,174 @@
 <template>
-  <div :key="$route.params.slug">
-    <div
-      :class="[{ overlay: viewImage }, 'lh-copy center mw-9 pa3']"
-      @mouseover="showImage"
-      @mouseout="resetImage"
-      @touchstart="showImage"
-      @touchend="resetImage"
-      v-html="content.default"
-    />
-    <div
-      v-if="viewImage"
-      class="imageHolder"
-    >
-      <img v-lazy="viewImage">
+  <div class="content entry">
+    <div v-if="fm" class="meta">
+      <h1 v-if="fm.title" v-html="fm.title" />
+      <p v-if="fm.description" v-html="fm.description" />
     </div>
+    <div class="text" v-html="content"></div>
   </div>
 </template>
 
 <script>
-export default {
-  transition: "fade",
-  data: function() {
-    return {
-      viewImage: null
-    };
-  },
-  async asyncData({ params }) {
-    const fileContent = await import(`@/static/markdown/${params.slug}.md`);
-    return {
-      content: fileContent
-    };
-  },
-  methods: {
-    resetImage: function(event) {
-      this.viewImage = null;
-    },
-    showImage: function(event) {
-      const e = event;
-      const t = e.target;
-      if (t.tagName === "A" && t.attributes.getNamedItem("href")) {
-        const href = t.attributes.href.value;
-        const isImage = new RegExp(/\.(gif|jpg|jpeg|tiff|png)$/i).test(href);
-        if (isImage) {
-          e.preventDefault();
-          this.viewImage = href;
-        } else {
-          return;
-        }
-      } else {
-        return;
+import implicitFigures from "markdown-it-implicit-figures";
+import html5embed from "markdown-it-html5-embed";
+import namedHeadings from "markdown-it-named-headings";
+import footnote from "markdown-it-footnote";
+import * as matter from "gray-matter";
+
+const md = require("markdown-it")({
+  html: true,
+  linkify: true,
+  typographer: true,
+  quotes: "“”‘’"
+})
+  .use(implicitFigures)
+  .use(html5embed, {
+    useImageSyntax: false,
+    useLinkSyntax: true,
+    isAllowedHttp: true,
+    renderFn(properties) {
+      switch (properties.mediaType) {
+        case "video":
+          return `<figure class="video">
+                      <video
+                        data-src="${properties.url}"
+                        poster="${properties.url.replace(".mp4", ".jpg")}"
+                        preload="none"
+                        autoplay
+                        loop
+                        controls="false"
+                      ></video>
+                    </figure>
+                  `;
+        case "audio":
+          return `<audio src="${properties.url}" controls></audio>`;
       }
     }
+  })
+  .use(namedHeadings)
+  .use(footnote);
+
+export default {
+  async asyncData({ params }) {
+    if (params.slug == null) {
+      params.slug = "index";
+    }
+    const fileContent = await import(`@/markdown/${params.slug}.md`);
+    const matterd = matter(fileContent.default);
+    return {
+      fm: matterd.data,
+      content: md.render(matterd.content)
+    };
+  },
+  head() {
+    const fm = this.fm;
+    return {
+      title: fm.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: fm.description
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: fm.title
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: fm.description
+        }
+      ]
+    };
   }
 };
 </script>
 
-<style lang="css" scoped>
-.imageHolder {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 100vw;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  pointer-events: none;
+<style>
+.text,
+.meta {
+  --col: 4/10;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  grid-column: 1/-1;
+  word-break: break-word;
 }
 
-.imageHolder img {
-  width: 100%;
-  height: auto;
+.meta {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgb(var(--textcolor));
 }
 
-.overlay {
-  -webkit-background-clip: text;
-  filter: invert(1);
-  mix-blend-mode: exclusion;
-  background: white;
-  position: relative;
-  z-index: 1;
+.meta > * {
+  align-self: start;
+  grid-column: 1/13;
 }
 
->>> h3 {
-  font-weight: normal;
-}
->>> ul {
-  padding-left: 1.33em;
+.text > * {
+  align-self: start;
+  grid-column: 1/13;
 }
 
->>> li {
-  list-style: none;
-  position: relative;
-}
-
->>> li:before {
-  content: '→';
-  position: absolute;
-  left: -1.33em;
-}
-
->>> .figure {
+.text > figure {
+  margin: 2rem 0;
+  align-self: start;
+  grid-column: 1/13;
   text-align: center;
-  margin: 5rem 0;
 }
 
->>> .figure h2,
->>> .figure h3 {
-  max-width: 22.5em;
-  text-align: left;
-  margin: 3em auto;
+.text > h2 {
+  margin-top: 2rem;
 }
 
->>> .logo-parade {
-  max-width: 40em;
-  margin: 0 auto;
+.footnotes-sep {
+  display: none;
 }
 
->>> .logo-parade p {
-  margin: 6em 0;
+.footnotes {
+  margin-top: 2rem;
+  font-size: 80%;
 }
 
->>> .logo-parade p:nth-child(4),
->>> .logo-parade p:nth-child(5) {
-  padding: 0 15%;
+@media (min-width: 800px) {
+  .meta > *:nth-child(1) {
+    grid-column: 1/3;
+  }
+
+  .meta > *:nth-child(2) {
+    grid-column: 3/11;
+  }
+
+  .text > * {
+    grid-column: 3/11;
+  }
 }
 
->>> .logo-parade p:nth-child(7),
->>> .logo-parade p:nth-child(9) {
-  padding: 0 25%;
+@media (min-width: 1150px) {
+  .meta > *:nth-child(1) {
+    grid-column: 1/4;
+  }
+
+  .meta > *:nth-child(2) {
+    grid-column: 4/10;
+  }
+
+  .text > * {
+    grid-column: 4/10;
+  }
+
+  .text > h2 {
+    grid-column: 1/4;
+  }
+
+  .text > h2 + * {
+    margin-top: 2rem;
+  }
 }
 </style>

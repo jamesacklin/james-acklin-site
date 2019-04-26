@@ -1,60 +1,103 @@
 <template>
-  <main class="near-black">
-    <site-header />
-    <nuxt />
-    <site-footer />
-  </main>
+  <div id="app">
+    <div v-if="$nuxt.isOffline">
+      <em>you are chilling out in offline mode</em>
+    </div>
+    <main>
+      <Navigation />
+      <nuxt />
+    </main>
+  </div>
 </template>
 
 <script>
-import SiteHeader from '~/components/Header.vue'
-import SiteFooter from '~/components/Footer.vue'
-
+import Navigation from "@/components/Navigation";
 export default {
   components: {
-    SiteHeader,
-    SiteFooter
-  },
-  data() {
-    return {
-      navHeight: null
-    }
-  },
-  beforeRouteLeave(to, from, next) {}
-}
+    Navigation
+  }
+};
 </script>
 
-<style lang="css">
+<style>
+:root {
+  --bgcolor: 255, 255, 255;
+  --textcolor: 0, 0, 0;
+  --sans: "Work Sans", sans-serif;
+  --mono: "IBM Plex Mono", menlo, monaco, monospace;
+  --light: 300;
+  --normal: 400;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "kern" 1;
+  -ms-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  -webkit-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+body {
+  background: rgb(var(--bgcolor));
+  color: rgb(var(--textcolor));
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: var(--sans);
+}
+
+::-moz-selection {
+  background: rgba(127, 127, 127, 0.5);
+}
+::selection {
+  background: rgba(127, 127, 127, 0.5);
+}
+
 main {
-  font-family: 'AUTHENTIC Sans', sans-serif;
-}
-a,
-.link {
-  color: #9e9f89;
-}
-a:hover {
-  text-decoration: none;
-}
-a:focus,
-.link:focus {
-  outline: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-@media (max-height: 28em) {
-  main { padding-top: 2em; }
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem 1rem 4rem 1rem;
 }
 
-@media (max-height: 28em) and (min-width: 30em){
-  main { padding-top: 5rem; }
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit;
+  font-weight: var(--normal);
 }
 
-@media (min-height: 28em){
-  main {
-    padding-left: 3rem;
-  }
+p {
+  font-size: inherit;
+  font-weight: var(--normal);
 }
 
-@media (min-width: 30em) and (min-height: 28em){
-  main { padding-left: 4rem }
+a {
+  color: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
 }
 </style>

@@ -1,0 +1,47 @@
+<template>
+  <header>
+    <div>James Acklin</div>
+    <div>
+      <nuxt-link to="/index">Index</nuxt-link>
+      <br />
+      <nuxt-link to="/currently">Currently</nuxt-link>
+    </div>
+  </header>
+</template>
+
+<script>
+export default {
+  name: "Navigation"
+};
+</script>
+
+<style scoped>
+header {
+  display: grid;
+  column-gap: 1rem;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 1rem 1rem 4rem 1rem;
+  margin-top: -0.3rem;
+}
+
+header > div:nth-child(1) {
+  grid-column: 1 / 7;
+}
+header > div:nth-child(2) {
+  grid-column: 7 / 12;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nuxt-link-active {
+  position: relative;
+}
+
+.nuxt-link-active:before {
+  content: "→";
+  position: absolute;
+  left: -1.5em;
+}
+</style>

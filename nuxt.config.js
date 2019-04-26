@@ -1,66 +1,85 @@
-const { join } = require('path')
-const dir = require('node-dir')
-const routesArray = []
-const fs = require('fs')
+const fs = require("fs");
 
-var files = fs.readdirSync('./static/markdown')
+const files = fs.readdirSync("./markdown");
 
-function getSlugs(post, index) {
-  let slug = post.substr(0, post.lastIndexOf('.'))
-  return `/${slug}`
+function getSlugs(post) {
+  let slug = post.substr(0, post.lastIndexOf("."));
+  return `/${slug}`;
 }
 
 module.exports = {
-  mode: 'universal',
+  mode: "universal",
   head: {
     htmlAttrs: {
-      lang: 'en'
+      lang: "en-us"
     },
-    title: 'James Acklin',
+    title: "Index",
+    titleTemplate: "%s - James Acklin",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: 'description',
-        name: 'description',
-        content: 'James Acklin, designer + developer'
+        hid: "description",
+        name: "description",
+        content: "James Acklin, designer +  developer"
+      }
+    ],
+    link: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico"
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,300i|Work+Sans:400"
       }
     ]
   },
-  modules: ['@nuxtjs/axios', '@nuxtjs/markdownit', '@nuxtjs/pwa'],
-  axios: {
-    https: true,
-    progress: true
-  },
-  markdownit: {
-    preset: 'default',
-    linkify: true,
-    breaks: true,
-    use: [
-      ['markdown-it-container', 'content'],
-      ['markdown-it-container', 'figure'],
-      ['markdown-it-container', 'logo-parade']
+  router: {
+    routes: [
+      {
+        path: "/",
+        redirect: {
+          name: "index"
+        }
+      },
+      {
+        path: "/index",
+        name: "index"
+      }
     ]
   },
-  css: ['~assets/main.css', '~assets/transition.css'],
-  plugins: [{ src: '~/plugins/vue-lazy.js', ssr: false }],
-  loading: {
-    color: '#9e9f89'
-  },
+  modules: ["@nuxtjs/pwa"],
+  plugins: [],
+  css: [],
+  loading: { color: "#000000" },
   manifest: {
-    name: 'James Acklin',
-    short_name: 'James Acklin',
-    description: 'Personal site for James Acklin',
-    lang: 'en-us',
-    dir: 'ltr',
-    background_color: '#fff',
-    theme_color: '#9e9f89',
-    display: 'standalone',
-    orientation: 'portrait-primary'
+    name: "James Acklin",
+    short_name: "ja",
+    description: "James Acklin, designer + developer",
+    lang: "en-us",
+    dir: "ltr",
+    background_color: "#FFF",
+    theme_color: "#000",
+    display: "standalone",
+    orientation: "portrait-primary",
+    icons: [
+      {
+        src: "/android-chrome-192x192.png",
+        sizes: "192x192",
+        type: "image/png"
+      },
+      {
+        src: "/android-chrome-512x512.png",
+        sizes: "512x512",
+        type: "image/png"
+      }
+    ]
   },
   generate: {
     routes: function() {
-      return files.map(getSlugs)
+      return files.map(getSlugs);
     },
     cache: true,
     html: {
@@ -78,15 +97,32 @@ module.exports = {
     }
   },
   build: {
+    postcss: {
+      plugins: {},
+      preset: {
+        autoprefixer: {
+          grid: true
+        }
+      }
+    },
+    extractCSS: true,
     extend(config, ctx) {
+      // Load markdown files as raw strings
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: "raw-loader"
+      });
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
-          enforce: 'pre',
+          enforce: "pre",
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
+          loader: "eslint-loader",
+          exclude: /(node_modules)/,
+          options: {
+            fix: true
+          }
+        });
       }
     }
   }
-}
+};

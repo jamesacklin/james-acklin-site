@@ -1,11 +1,9 @@
 {
-  "name": "jamesacklin",
-  "version": 1,
-  "alias": ["ackl.in", "jamesacklin.com", "www.jamesacklin.com"],
-  "files": ["dist"],
-  "type": "static",
-  "static": {
-    "trailingSlash": true,
-    "public": "dist"
-  }
+  "version": 2,
+  "builds": [{ "src": "package.json", "use": "@now/static-build" }],
+  "alias": [
+    "ackl.in",
+    "jamesacklin.com",
+    "www.jamesacklin.com"
+  ]
 }
