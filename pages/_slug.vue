@@ -4,6 +4,9 @@
       <h1 v-if="fm.title" v-html="fm.title" />
       <p v-if="fm.description" v-html="fm.description" />
     </div>
+    <div class="lede">
+      <p>{{ fm.lede }}</p>
+    </div>
     <div class="text" v-html="content"></div>
   </div>
 </template>
@@ -109,6 +112,14 @@ export default {
 .meta > * {
   align-self: start;
   grid-column: 1/13;
+}
+
+.lede > * {
+  align-self: start;
+  grid-column: 1/13;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  line-break: strict;
 }
 
 .text > * {

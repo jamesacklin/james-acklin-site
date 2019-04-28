@@ -96,6 +96,11 @@ a {
   color: inherit;
 }
 
+li {
+  list-style-position: outside;
+  margin-left: 1em;
+}
+
 img,
 video {
   max-width: 100%;
