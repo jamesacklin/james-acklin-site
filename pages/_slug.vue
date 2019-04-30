@@ -139,12 +139,18 @@ export default {
 }
 
 .footnotes-sep {
-  display: none;
+  grid-column: 1/13 !important;
+  height: 0;
+  border-top: 1px solid black;
 }
 
 .footnotes {
   margin-top: 2rem;
   font-size: 80%;
+}
+
+.footnote-item {
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 800px) {
@@ -158,6 +164,10 @@ export default {
 
   .text > * {
     grid-column: 3/11;
+  }
+
+  .footnotes {
+    grid-column: 1/13 !important;
   }
 }
 
