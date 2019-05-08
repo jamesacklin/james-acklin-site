@@ -29,10 +29,6 @@ module.exports = {
         rel: "icon",
         type: "image/x-icon",
         href: "/favicon.ico"
-      },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,300i|Work+Sans:400"
       }
     ]
   },

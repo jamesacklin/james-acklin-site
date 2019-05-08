@@ -20,11 +20,18 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: "Public Sans";
+  src: url("/fonts/PublicSans-Light.woff2") format("woff2"),
+    url("/fonts/PublicSans-Light.woff") format("woff");
+  font-display: swap;
+}
+
 :root {
   --bgcolor: 255, 255, 255;
   --textcolor: 0, 0, 0;
-  --sans: "Work Sans", sans-serif;
-  --mono: "IBM Plex Mono", menlo, monaco, monospace;
+  --sans: "Public Sans", sans-serif;
+  --mono: menlo, monaco, monospace;
   --light: 300;
   --normal: 400;
 }
@@ -53,7 +60,7 @@ body {
   background: rgb(var(--bgcolor));
   color: rgb(var(--textcolor));
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.45;
   font-family: var(--sans);
 }
 
