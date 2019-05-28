@@ -27,10 +27,17 @@ export default {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Ogg Roman";
+  src: url("/fonts/Ogg-Roman.woff2") format("woff2"), url("/fonts/Ogg-Roman.woff") format("woff");
+  font-display: swap;
+}
+
 :root {
   --bgcolor: 255, 255, 255;
   --textcolor: 0, 0, 0;
   --sans: "Public Sans", sans-serif;
+  --serif: "Ogg Roman", serif;
   --mono: menlo, monaco, monospace;
   --light: 300;
   --normal: 400;
@@ -48,12 +55,6 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -moz-font-feature-settings: "kern" 1;
-  -ms-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
-  -webkit-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
-  font-kerning: normal;
 }
 
 body {

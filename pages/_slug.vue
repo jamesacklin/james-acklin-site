@@ -115,11 +115,18 @@ export default {
 }
 
 .lede > * {
+  font-family: var(--serif);
   align-self: start;
   grid-column: 1/13;
-  margin-bottom: 2rem;
+  margin-bottom: 1em;
   font-size: 2rem;
   line-break: strict;
+}
+
+@media (min-width: 768px) {
+  .lede > * {
+    font-size: 2.5rem;
+  }
 }
 
 .text > * {
@@ -166,6 +173,14 @@ export default {
     grid-column: 3/11;
   }
 
+  .text > h2 {
+    grid-column: 1/3;
+  }
+
+  .text > h2 + * {
+    margin-top: 2rem;
+  }
+
   .footnotes {
     grid-column: 1/13 !important;
   }
@@ -186,10 +201,6 @@ export default {
 
   .text > h2 {
     grid-column: 1/4;
-  }
-
-  .text > h2 + * {
-    margin-top: 2rem;
   }
 }
 </style>
