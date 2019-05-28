@@ -1,6 +1,7 @@
-# Rhiza Help Documentation
-
-Making Rhiza's help documentation process more collaborative
+---
+title: Rhiza Help Documentation
+description: Making Rhiza's help documentation process more collaborative
+---
 
 ## Problem Definition
 

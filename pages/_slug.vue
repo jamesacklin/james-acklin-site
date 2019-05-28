@@ -4,7 +4,7 @@
       <h1 v-if="fm.title" v-html="fm.title" />
       <p v-if="fm.description" v-html="fm.description" />
     </div>
-    <div class="lede">
+    <div v-if="fm.lede" class="lede">
       <p>{{ fm.lede }}</p>
     </div>
     <div class="text" v-html="content"></div>
