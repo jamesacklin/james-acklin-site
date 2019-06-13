@@ -21,24 +21,34 @@ export default {
 
 <style>
 @font-face {
-  font-family: "Public Sans";
-  src: url("/fonts/PublicSans-Light.woff2") format("woff2"),
-    url("/fonts/PublicSans-Light.woff") format("woff");
-  font-display: swap;
+  font-family: "IBMPlexMono-Light";
+  src: url("/fonts/IBMPlexMono-Light-Latin1.woff") format("woff"),
+    url("/fonts/IBMPlexMono-Light-Latin1.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
 }
 
 @font-face {
-  font-family: "Ogg Roman";
-  src: url("/fonts/Ogg-Roman.woff2") format("woff2"), url("/fonts/Ogg-Roman.woff") format("woff");
+  font-family: "IBMPlexMono-LightItalic";
+  src: url("/fonts/IBMPlexMono-LightItalic-Latin1.woff") format("woff"),
+    url("/fonts/IBMPlexMono-LightItalic-Latin1.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Manege Light";
+  src: url("/fonts/ManegeLight.woff") format("woff");
   font-display: swap;
 }
 
 :root {
   --bgcolor: 255, 255, 255;
   --textcolor: 0, 0, 0;
-  --sans: "Public Sans", sans-serif;
-  --serif: "Ogg Roman", serif;
-  --mono: menlo, monaco, monospace;
+  /* --sans: "Public Sans", sans-serif; */
+  --sans: "Helvetica", "Arial", sans-serif;
+  --serif: "Manege Light", serif;
+  --mono: "IBMPlexMono-Light", menlo, monaco, monospace;
   --light: 300;
   --normal: 400;
 }
@@ -60,9 +70,9 @@ html {
 body {
   background: rgb(var(--bgcolor));
   color: rgb(var(--textcolor));
-  font-size: 1rem;
-  line-height: 1.45;
-  font-family: var(--sans);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-family: var(--mono);
 }
 
 ::-moz-selection {
@@ -91,13 +101,18 @@ h1,
 h2,
 h3,
 h4 {
-  font-size: inherit;
+  font-family: var(--serif);
   font-weight: var(--normal);
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  line-height: 1.25;
 }
 
-p {
+p,
+li {
   font-size: inherit;
   font-weight: var(--normal);
+  line-height: 1.5;
 }
 
 a {
