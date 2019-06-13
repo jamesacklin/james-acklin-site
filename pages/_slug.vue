@@ -121,6 +121,11 @@ export default {
   margin-bottom: 1em;
   font-size: 2rem;
   line-break: strict;
+  line-height: 1.25;
+}
+
+.text > ul > li {
+  margin-bottom: 1em;
 }
 
 @media (min-width: 768px) {
