@@ -1,13 +1,13 @@
 <template>
   <header>
-    <div>James Acklin</div>
+    <div>JAMES ACKLIN</div>
     <div>
       <nuxt-link to="/index">Index</nuxt-link>
       <br />
       <nuxt-link to="/currently">Currently</nuxt-link>
     </div>
     <div>
-      <span style="text-decoration: underline;">Projects</span>
+      <span style="text-decoration: underline;">PROJECTS</span>
       <br />
       <nuxt-link to="/rhiza">Nielsen Rhiza</nuxt-link>
       <br />

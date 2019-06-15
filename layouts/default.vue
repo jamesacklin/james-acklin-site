@@ -34,7 +34,7 @@ export default {
 
 :root {
   --bgcolor: 255, 255, 255;
-  --textcolor: 0, 0, 0;
+  --textcolor: 0, 0, 255;
   /* --sans: "Public Sans", sans-serif; */
   --sans: "Helvetica", "Arial", sans-serif;
   --serif: "Manege Light", serif;

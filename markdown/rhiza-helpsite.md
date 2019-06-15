@@ -3,7 +3,7 @@ title: Rhiza Help Documentation
 description: Making Rhiza's help documentation process more collaborative
 ---
 
-## Problem Definition
+### Problem Definition
 
 The current Rhiza documentation site was authored and deployed by a single author as a stopgap solution during a time of rapid development in the company, which metastasized into a semi-permanent archive of all things Rhiza. Upon Nielsen's acquisition of Rhiza, the site developed multiple audiences—Nielsen clients and internal folks both needed access to the same level of detailed documentation.
 
@@ -13,13 +13,13 @@ The site was developed in an expensive Windows documentation software solution, 
 
 ![](/images/helpsite-process-single.png)
 
-## Existing Workflow
+### Existing Workflow
 
 Not only was the authorship model a challenge, preserving the existing order required each contributor to follow a detailed checklist of fairly technical steps with a large penalty for error. Furthermore, ultimately deploying the built site was beholden to an dev/ops engineer's schedule and interest.
 
 Ultimately, this complex process was a non-starter for most of the team, blocking them from accomplishing their primary goal of writing and publishing Rhiza's documentation.
 
-## Proposed Workflow
+### Proposed Workflow
 
 The team and I worked some positive statements that would guide our work and give us some goals to work toward.
 
@@ -35,7 +35,7 @@ The team and I worked some positive statements that would guide our work and giv
 
 ![](/images/helpsite-process-multi.png)
 
-## Solution Auditing
+### Solution Auditing
 
 The team and I conducted a survey of a few static site generators and CMS-as-a-service offerings. We ultimately decided to maintain our own build infrastructure and host our code on Github, along with the main Rhiza source code.
 
@@ -43,18 +43,18 @@ The team and I conducted a survey of a few static site generators and CMS-as-a-s
 
 ![](/images/helpsite-deploys.png)
 
-## Implementation
+### Implementation
 
 Transforming a flat list of ~150 articles in a proprietary format to a nested hierarchy of Markdown files was tedious, but `pandoc` was my close friend. Once the content was in order, [Vuepress](https://vuepress.vuejs.org/) was relatively easy to get up and running, and the [default theme configuration](https://vuepress.vuejs.org/default-theme-config/) is straightforward and was perfectly adaptable to our needs.
 
 The only real difficulty was engineering a Jenkins solution using Docker, but since there's no database per se, the site builds stably and reliably, triggered by checkin on the help site's `master` branch.
 
-## Result
+### Result
 
 As a result, Rhiza now has an up-to-date documentation site, built atop open formats, and generated using open-source tools on our own infrastructure. Team members regularly update the site with each release, and clients can find help articles relating to their specific issue.
 
 ![](/images/rhiza-helpsite-collage.jpg)
 
-## Future Work
+### Future Work
 
 Our data and development teams are slowly building more automated content integrations into their processes, such that as the application changes, the documentation automatically evolves along with it. Examples of such integrations include using [Storybook](https://storybook.js.org/)-authored components with docstrings, and updating data documentation files during ETL workflows.

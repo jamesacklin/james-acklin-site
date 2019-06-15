@@ -3,7 +3,7 @@ title: Rhiza Explore Page
 description: Designing, prototyping, and implementing an entry point for Rhiza users
 ---
 
-## Problem Definition
+### Problem Definition
 
 Rhiza is a very powerful data analytics and visualization tool, but due to its near-infinite flexibility, it comes with a significant learning curve. During the course of this project, I sought to design a way for new or inexperienced users to get access to the same interesting, valuable data-driven stories as experienced researchers.
 
@@ -15,7 +15,7 @@ The user should be able to:
 2.  Fill in some easily-understood inputs to these stories, and
 3.  Peruse the the resulting visualizations or presentation.
 
-## Rough Prototyping & Primary Research
+### Rough Prototyping & Primary Research
 
 We began with some low-fidelity, interactive prototypes I designed based on these notions. This was followed by a stakeholder demonstration and review.
 
@@ -29,19 +29,19 @@ Next, we worked on the information architecture and organization of the pre-bake
 
 ![](/images/rhiza_explore_ia_review.png)
 
-## Concept Refinement
+### Concept Refinement
 
 I quickly scratched together some HTML, CSS, and JavaScript prototypes to test the interaction with semi-live data, and to demonstrate the page to developers. We found that users responded well to the initial list of categories, which they understood to be a list of capabilities for the software itself.
 
 ![](/images/rhiza_explore_html_prototypes.png)
 
-## Implementation
+### Implementation
 
 The implementation phase went fairly smoothly, since we already had working HTML, CSS, and JavaScript from the previous phase. The Explorer underwent some aesthetic developments, as we received more feedback from the broader product leadership organization. We launched the MVP version of this interface and debuted at a major advertising conference, garnering lots of excitement and positive feedback from new and existing Nielsen clients.
 
 ![](/images/rhiza_explore_mvp.png)
 
-## Iterative Improvements
+### Iterative Improvements
 
 Moving past our initial launch, we began chipping away at the features and nice-to-haves that didn't make it in to the MVP. I designed the story "cards" to reflect various states of completeness of metadata, such that they worked together as a system.
 
