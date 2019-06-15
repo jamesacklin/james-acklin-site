@@ -38,12 +38,20 @@ header {
 header > div:nth-child(1) {
   grid-column: 1 / 6;
 }
-header > div:nth-child(2) {
-  grid-column: 6 / 9;
+
+header > div:nth-child(2),
+header > div:nth-child(3) {
+  grid-column: 6/13;
 }
 
-header > div:nth-child(3) {
-  grid-column: 9/13;
+@media (min-width: 800px) {
+  header > div:nth-child(2) {
+    grid-column: 6 / 9;
+  }
+
+  header > div:nth-child(3) {
+    grid-column: 9/13;
+  }
 }
 
 a {

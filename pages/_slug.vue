@@ -169,7 +169,7 @@ export default {
 
 @media (min-width: 800px) {
   .meta > *:nth-child(1) {
-    grid-column: 1/3;
+    grid-column: 1/13;
   }
 
   .meta > *:nth-child(2) {
@@ -181,7 +181,7 @@ export default {
   }
 
   .text > h2 {
-    grid-column: 1/8;
+    grid-column: 1/13;
   }
 
   .footnotes {
