@@ -100,6 +100,7 @@ export default {
   column-gap: 1rem;
   row-gap: 1rem;
   grid-column: 1/-1;
+  hyphens: auto;
   word-break: break-word;
 }
 
@@ -140,7 +141,7 @@ export default {
 }
 
 .text > figure {
-  margin: 2rem 0;
+  margin: 4em 0;
   align-self: start;
   grid-column: 1/13;
   text-align: center;
@@ -153,7 +154,8 @@ export default {
 .footnotes-sep {
   grid-column: 1/13 !important;
   height: 0;
-  border-top: 1px solid black;
+  border-top: 1px solid rgb(var(--textcolor));
+  border-bottom: none;
 }
 
 .footnotes {
@@ -179,11 +181,7 @@ export default {
   }
 
   .text > h2 {
-    grid-column: 1/3;
-  }
-
-  .text > h2 + * {
-    margin-top: 2rem;
+    grid-column: 1/8;
   }
 
   .footnotes {
@@ -193,19 +191,21 @@ export default {
 
 @media (min-width: 1150px) {
   .meta > *:nth-child(1) {
-    grid-column: 1/4;
+    grid-column: 1/6;
   }
 
   .meta > *:nth-child(2) {
-    grid-column: 4/10;
+    grid-column: 6/13;
   }
 
   .text > * {
-    grid-column: 4/10;
+    grid-column: 6/13;
   }
 
-  .text > h2 {
-    grid-column: 1/4;
+  .text > h2,
+  .text > h3 {
+    margin-top: 0;
+    grid-column: 1/6;
   }
 }
 </style>

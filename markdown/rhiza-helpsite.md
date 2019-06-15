@@ -40,6 +40,7 @@ The team and I worked some positive statements that would guide our work and giv
 The team and I conducted a survey of a few static site generators and CMS-as-a-service offerings. We ultimately decided to maintain our own build infrastructure and host our code on Github, along with the main Rhiza source code.
 
 ![](/images/helpsite-generators.png)
+
 ![](/images/helpsite-deploys.png)
 
 ## Implementation

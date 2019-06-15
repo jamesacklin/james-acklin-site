@@ -21,19 +21,9 @@ export default {
 
 <style>
 @font-face {
-  font-family: "IBMPlexMono-Light";
-  src: url("/fonts/IBMPlexMono-Light-Latin1.woff") format("woff"),
-    url("/fonts/IBMPlexMono-Light-Latin1.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "IBMPlexMono-LightItalic";
-  src: url("/fonts/IBMPlexMono-LightItalic-Latin1.woff") format("woff"),
-    url("/fonts/IBMPlexMono-LightItalic-Latin1.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 300;
+  font-family: "Panama Monospace";
+  src: url("/fonts/PanamaMonospace.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -48,7 +38,7 @@ export default {
   /* --sans: "Public Sans", sans-serif; */
   --sans: "Helvetica", "Arial", sans-serif;
   --serif: "Manege Light", serif;
-  --mono: "IBMPlexMono-Light", menlo, monaco, monospace;
+  --mono: "Panama Monospace", menlo, monaco, monospace;
   --light: 300;
   --normal: 400;
 }
@@ -70,16 +60,18 @@ html {
 body {
   background: rgb(var(--bgcolor));
   color: rgb(var(--textcolor));
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
   font-family: var(--mono);
 }
 
 ::-moz-selection {
-  background: rgba(127, 127, 127, 0.5);
+  background: rgb(var(--textcolor));
+  color: rgb(var(--bgcolor));
 }
 ::selection {
-  background: rgba(127, 127, 127, 0.5);
+  background: rgb(var(--textcolor));
+  color: rgb(var(--bgcolor));
 }
 
 main {
@@ -98,13 +90,20 @@ main {
 }
 
 h1,
-h2,
-h3,
-h4 {
+h2 {
   font-family: var(--serif);
   font-weight: var(--normal);
   text-transform: uppercase;
   font-size: 1.75rem;
+  line-height: 1.25;
+}
+
+h3,
+h4 {
+  font-family: var(--mono);
+  font-weight: var(--mono);
+  text-transform: uppercase;
+  font-size: 1rem;
   line-height: 1.25;
 }
 
@@ -113,6 +112,7 @@ li {
   font-size: inherit;
   font-weight: var(--normal);
   line-height: 1.5;
+  letter-spacing: -0.02em;
 }
 
 a {
@@ -127,5 +127,24 @@ li {
 img,
 video {
   max-width: 100%;
+}
+
+code {
+  font-family: var(--mono);
+  display: inline-block;
+  padding: 0.125em 0.25em;
+  background: rgb(var(--textcolor));
+  color: rgb(var(--bgcolor));
+}
+
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: smaller;
+  top: -0.4em;
+}
+
+sup a {
+  text-decoration: none;
 }
 </style>

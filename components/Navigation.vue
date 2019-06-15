@@ -6,6 +6,17 @@
       <br />
       <nuxt-link to="/currently">Currently</nuxt-link>
     </div>
+    <div>
+      <span style="text-decoration: underline;">Projects</span>
+      <br />
+      <nuxt-link to="/rhiza">Nielsen Rhiza</nuxt-link>
+      <br />
+      <nuxt-link to="/rhiza-helpsite">Rhiza Helpsite</nuxt-link>
+      <br />
+      <nuxt-link to="/rhiza-explorer">Rhiza Explorer</nuxt-link>
+      <br />
+      <nuxt-link to="/logos">Misc. Logos</nuxt-link>
+    </div>
   </header>
 </template>
 
@@ -25,10 +36,14 @@ header {
 }
 
 header > div:nth-child(1) {
-  grid-column: 1 / 7;
+  grid-column: 1 / 6;
 }
 header > div:nth-child(2) {
-  grid-column: 7 / 12;
+  grid-column: 6 / 9;
+}
+
+header > div:nth-child(3) {
+  grid-column: 9/13;
 }
 
 a {

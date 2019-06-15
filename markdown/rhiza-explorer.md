@@ -1,6 +1,7 @@
-# Rhiza Explore Page
-
-Designing, prototyping, and implementing an entry point for Rhiza users
+---
+title: Rhiza Explore Page
+description: Designing, prototyping, and implementing an entry point for Rhiza users
+---
 
 ## Problem Definition
 
