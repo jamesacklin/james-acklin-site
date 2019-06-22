@@ -52,12 +52,12 @@ module.exports = {
   loading: { color: "#000000" },
   manifest: {
     name: "James Acklin",
-    short_name: "ja",
+    short_name: "j9n",
     description: "James Acklin, designer + developer",
     lang: "en-us",
     dir: "ltr",
     background_color: "#FFF",
-    theme_color: "#000",
+    theme_color: "#0000ff",
     display: "standalone",
     orientation: "portrait-primary",
     icons: [
