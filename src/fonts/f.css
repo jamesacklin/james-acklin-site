@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'f';
+  src: url('f.eot');
+  src: url('f.eot?#iefix') format('embedded-opentype'),
+      url('f.woff2') format('woff2'),
+      url('f.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'f';
+  src: url('f-i.eot');
+  src: url('f-i.eot?#iefix') format('embedded-opentype'),
+      url('f-i.woff2') format('woff2'),
+      url('f-i.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}

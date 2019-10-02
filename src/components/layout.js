@@ -9,8 +9,17 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import styled from "styled-components"
+// eslint-disable-next-line
+import tachyons from "tachyons"
+
 import Header from "./header"
+import "../fonts/f.css"
 import "./layout.css"
+
+const Frame = styled.div.attrs({
+  className: `sans-serif ma0 pa0`
+})``
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,12 +35,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
+      <Frame>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}
         </footer>
-      </div>
+      </Frame>
     </>
   )
 }
