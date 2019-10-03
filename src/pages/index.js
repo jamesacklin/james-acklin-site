@@ -63,6 +63,7 @@ const IndexPage = () =>  {
             company
             role
             tools
+            team
             time
           }
           html

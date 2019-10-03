@@ -6,7 +6,7 @@ import tachyons from "tachyons"
 import Image from './image'
 
 const Article = styled.article.attrs({
-  className: `pv3-m pv5-l ma0 pa3 center mw8 lh-copy black bg-white cf`
+  className: `pv3-m pv5-l ma0 pa3 center mw8 black cf`
 })``
 
 const Meta = styled.header.attrs ({
@@ -14,14 +14,14 @@ const Meta = styled.header.attrs ({
 })``
 
 const Details = styled.aside.attrs({
-  className: `b--black ba bw-1 pa0 fl-l w-20-l`
+  className: `b--black ba bw-1 pa0 fl-l w-20-l bg-white`
 })`
   & > * {
     margin: 0; padding: 0 0.5em;
   }
 
   & > *:nth-child(2n+1){
-    padding-top: 0.5em;
+    padding: 0.5em;
   }
 
   & > *:nth-child(2n+2){
@@ -35,11 +35,11 @@ const Details = styled.aside.attrs({
 `
 
 const Title = styled.div.attrs({
-  className: `lh-title bt-l bl-m br bb bw-1 b--black ph2 pt2 mb3 fl-l w-80-l`
+  className: `lh-title bt-l bl-m br bb bw-1 b--black ph2 pt2 mb4 mb5-l fl-l w-80-l bg-white`
 })``
 
 const Story = styled.div.attrs({
-  className: ``
+  className: `lh-copy`
 })`
   & > p {
     margin: 0 auto;
@@ -55,18 +55,20 @@ const Story = styled.div.attrs({
 const CaseStudy = ({ fm, content }) => (
   <Article>
     <Meta>
-      <div className="bt bl br bw-1 b--black">
+      <div className="bt bl br bw-1 b--black bg-white">
         <Image />
       </div>
       <Details>
         <h4 className="ttu f6">Company</h4>
-        <p>{fm.company}</p>
+        <p className="lh-title">{fm.company}</p>
         <h4 className="ttu f6">Role</h4>
-        <p>{fm.role}</p>
+        <p className="lh-title">{fm.role}</p>
         <h4 className="ttu f6">Timeframe</h4>
-        <p>{fm.time}</p>
+        <p className="lh-title">{fm.time}</p>
+        <h4 className="ttu f6">Team</h4>
+        <p className="lh-title">{fm.team}</p>
         <h4 className="ttu f6">Tools</h4>
-        <p>{fm.tools}</p>
+        <p className="lh-title">{fm.tools}</p>
       </Details>
       <Title>
         <h4 className="ttu f6 ma0">Case Study</h4>
@@ -74,8 +76,7 @@ const CaseStudy = ({ fm, content }) => (
         <h3 className="f3 mt2 mb3">{fm.description}</h3>
       </Title>
     </Meta>
-    <Story dangerouslySetInnerHTML={{ __html: content }}>
-    </Story>
+    <Story dangerouslySetInnerHTML={{ __html: content }} />
   </Article>
 )
 

@@ -1,11 +1,12 @@
 ---
-title: A Project
-description: This is a short description included in the frontmatter
+title: User-Uploaded Data in Rhiza
+description: Enabling new use-cases for Rhiza at Nielsen
 company: The Nielsen Company
-role: UX Designer
-time: 12-18 Weeks
-tools: The Browser
-order: 1
+role: UX Designer, Protoype Developer, Front-End Developer
+time: 3 months
+team: 3-person engineering team + product leadership
+tools: Sketch, Vue.js (prototype), Angular (implementation)
+order: 2
 ---
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
