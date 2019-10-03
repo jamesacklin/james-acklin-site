@@ -2,10 +2,10 @@ import React from "react"
 import styled from "styled-components"
 // eslint-disable-next-line
 import tachyons from "tachyons"
-// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import CaseStudy from "../components/casestudy"
 import HeadlineSVG from '../images/headline.svg'
 
 const Intro = styled.div.attrs({
@@ -28,10 +28,16 @@ const Image = styled.img.attrs({
 const Autobiography = styled.div.attrs({
   className: "ma0 pa3 center mw8 f4 lh-copy"
 })`
-  & > :first-child {
-    margin-top: 0;
+  & > p {
+    margin: 0 auto;
+    max-width: 30em;
+    text-indent: 2ch;
   }
-  @media (min-width: 860px){ 
+
+  & > p:nth-of-type(1) {
+    text-indent: 0;
+  }
+  @media (min-width: 58.125rem){ 
     & { 
       column-count: 2;
     }
@@ -59,6 +65,8 @@ const IndexPage = () => (
         <p>Occasionally, I conduct branding exercises and do general graphic design work for projects I'm interested in or personally connected to. I am not presently accepting freelance&nbsp;opportunities.</p>
       </Autobiography>
     </Intro>
+    <CaseStudy />
+    <CaseStudy />
   </Layout>
 )
 
