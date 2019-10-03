@@ -6,7 +6,7 @@ import tachyons from "tachyons"
 import Image from './image'
 
 const Article = styled.article.attrs({
-  className: `pv3-m pv5-l ma0 pa3 center mw8 lh-copy black bg-white`
+  className: `pv3-m pv5-l ma0 pa3 center mw8 lh-copy black bg-white cf`
 })``
 
 const Meta = styled.header.attrs ({
@@ -74,8 +74,7 @@ const CaseStudy = ({ fm, content }) => (
         <h3 className="f3 mt2 mb3">{fm.description}</h3>
       </Title>
     </Meta>
-    <Story>
-      {content}
+    <Story dangerouslySetInnerHTML={{ __html: content }}>
     </Story>
   </Article>
 )

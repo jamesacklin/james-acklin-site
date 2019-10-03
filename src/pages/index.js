@@ -55,7 +55,7 @@ const Highlight = styled.span.attrs({
 const IndexPage = () =>  {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: {order: ASC, fields: frontmatter___order}) {
         nodes {
           frontmatter {
             description
