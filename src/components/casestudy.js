@@ -18,8 +18,14 @@ const Details = styled.aside.attrs({
 })``
 
 const Title = styled.div.attrs({
-  className: `lh-title w-80-l`
+  className: `lh-title`
 })``
+
+const Name = styled.h2.attrs({
+  className: `f1 mt2 mb0 serif normal`
+})`
+  letter-spacing: -0.075ch;
+`
 
 const Story = styled.div.attrs({
   className: `lh-copy f5`
@@ -33,12 +39,17 @@ const Story = styled.div.attrs({
   & > p:nth-of-type(1) {
     text-indent: 0;
   }
+
+  & > figure {
+    width: 100%;
+    clear: both;
+  }
 `
 
 const CaseStudy = ({ fm, content }) => (
   <Article>
     <Meta>
-      <div className="">
+      <div className="mb3 mb5-l">
         <Image src={fm.image} />
       </div>
       <Details>
@@ -54,9 +65,9 @@ const CaseStudy = ({ fm, content }) => (
         <p className="mt0 mb3">{fm.tools}</p>
       </Details>
       <Title>
-        <h4 className="ttu f6 ma0 ma0">Case Study</h4>
-        <h2 className="f2 ma0">{fm.title}</h2>
-        <h3 className="f3 mt2 mb4">{fm.description}</h3>
+        <h4 className="ttu f6 ma0 ma0 silver">Case Study</h4>
+        <Name>{fm.title}</Name>
+        <h3 className="f3 mt0 mb4">{fm.description}</h3>
       </Title>
     </Meta>
     <Story dangerouslySetInnerHTML={{ __html: content }} />
