@@ -14,7 +14,7 @@ const Meta = styled.header.attrs ({
 })``
 
 const Details = styled.aside.attrs({
-  className: `lh-title w-20-l fl-l light-silver f5`
+  className: `lh-title w-20-l fl-l silver f6 pr4-l`
 })``
 
 const Title = styled.div.attrs({
@@ -39,7 +39,7 @@ const CaseStudy = ({ fm, content }) => (
   <Article>
     <Meta>
       <div className="">
-        <Image />
+        <Image src={fm.image} />
       </div>
       <Details>
         <h4 className="ttu f6 ma0">Company</h4>

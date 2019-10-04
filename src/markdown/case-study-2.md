@@ -6,6 +6,7 @@ role: UX Designer, Protoype Developer, Front-End Developer
 time: 3 months
 team: 3-person engineering team + product leadership
 tools: Sketch, Vue.js (prototype), Angular (implementation)
+image: gatsby-astronaut.png
 order: 2
 ---
 

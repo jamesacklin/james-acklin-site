@@ -6,6 +6,7 @@ role: UX Designer, Protoype Developer
 time: 3 months
 team: Broad organizational support
 tools: Sketch, Principle, Vue.js
+image: gatsby-astronaut.png
 order: 1
 ---
 

@@ -68,6 +68,7 @@ const IndexPage = () =>  {
               title
               tools
               time
+              image
             }
           }
         }
