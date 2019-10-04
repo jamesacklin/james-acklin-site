@@ -18,7 +18,7 @@ import "../fonts/f.css"
 import "./layout.css"
 
 const Frame = styled.div.attrs({
-  className: `sans-serif ma0 pa0 bg-light-gray`
+  className: `sans-serif ma0 pa0 bg-white`
 })``
 
 const Layout = ({ children }) => {

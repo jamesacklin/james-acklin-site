@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 // eslint-disable-next-line
 import tachyons from "tachyons"
+import Particles from 'react-particles-js';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -10,7 +11,7 @@ import CaseStudy from "../components/casestudy"
 import HeadlineSVG from '../images/headline.svg'
 
 const Intro = styled.div.attrs({
-  className: `pv3-m pv5-l`
+  className: `pv3-m pv5-l relative`
 })`
   color: white;
   background: black;
@@ -54,23 +55,82 @@ const Highlight = styled.span.attrs({
 
 const IndexPage = () =>  {
   const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark(sort: {order: ASC, fields: frontmatter___order}) {
-        nodes {
-          frontmatter {
-            description
-            title
-            company
-            role
-            tools
-            team
-            time
+    query CaseStudies {
+      allMarkdownRemark {
+        edges {
+          node {
+            html
+            frontmatter {
+              company
+              description
+              role
+              team
+              title
+              tools
+              time
+            }
           }
-          html
         }
       }
     }
   `)
+
+  const particlesOptions = {
+      "particles": {
+        "number": {
+          "value": 32,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 1,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 200,
+          "color": "#ffffff",
+          "opacity": 1,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "retina_detect": true
+  }
 
   return (
     <Layout>
@@ -85,10 +145,12 @@ const IndexPage = () =>  {
           <p>I&nbsp;am comfortable in <Highlight>pro-complexity UX vacuums</Highlight> and have extensive experience articulating the business value of human-centered design. My design practice concentrates on high-fidelity <Highlight>prototyping,</Highlight> information design, and living code deliverables. I&nbsp;have a passion for manipulating data and working with the raw material of the&nbsp;web.</p>
           <p>Occasionally, I conduct branding exercises and do general graphic design work for projects I'm interested in or personally connected to. I am not presently accepting freelance&nbsp;opportunities.</p>
         </Autobiography>
+        <Particles params={particlesOptions} className="absolute top-0 left-0 w-100 h-100" />
       </Intro>
-      {data.allMarkdownRemark.nodes.map((value, index) => {
-        return <CaseStudy fm={value.frontmatter}
-                          content={value.html} />
+      {data.allMarkdownRemark.edges.map((edge, index) => {
+        return <CaseStudy key={index}
+                          fm={edge.node.frontmatter}
+                          content={edge.node.html} />
       })}
     </Layout>
   )
