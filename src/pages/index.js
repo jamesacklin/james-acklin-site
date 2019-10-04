@@ -62,6 +62,7 @@ const IndexPage = () =>  {
         edges {
           node {
             html
+            htmlAst
             frontmatter {
               company
               description
@@ -96,6 +97,7 @@ const IndexPage = () =>  {
       {data.allMarkdownRemark.edges.map((edge, index) => {
         return <CaseStudy key={index}
                           fm={edge.node.frontmatter}
+                          ast={edge.node.htmlAst}
                           content={edge.node.html} />
       })}
     </Layout>

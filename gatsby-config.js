@@ -22,7 +22,9 @@ module.exports = {
     },
     {
       resolve: `gatsby-transformer-remark`,
-      options: {}
+      options: {
+        plugins: ["gatsby-remark-component"]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

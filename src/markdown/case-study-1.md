@@ -14,7 +14,4 @@ Upon acquisition in 2017, Rhiza's general-purpose analytics product needed to se
 
 We proposed targeting two different groups of users, introducing "Creator" and "Consumer" roles. The objective was to mask off just enough complexity and provide a refined workflow for "Consumer" users, while enhancing expressive power and publishing capabilities for "Creator" users. Along the way, we would develop a syndication model of pre-built research stories for "Consumer" users to subscribe to—thus creating a new revenue stream for Nielsen in local markets.
 
-<figure class="mh0 mv3 mv5-l cf flex-l ">
-  <Image class="w-80-l" src="http://localhost:8000/static/3583e1b353cdb68299b8e75c1deb76d2/81ef8/rhiza_explore_present_day.jpg" />
-  <figcaption class="w-20-l pl3-l self-end">→ A caption for this figure</figcaption>
-</figure>
+<Figure src="rhiza_user_data.png" alt="A user interface" caption="→ An interesting description of what this thing is or does<br>→ Trying out a line break<br>→ Or another" />
