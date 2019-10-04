@@ -38,8 +38,8 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <Frame>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}
+        <footer className="tc mv5 silver f6">
+          All product names, logos, brands, and artifacts are property of their respective owners. 
         </footer>
       </Frame>
     </>
