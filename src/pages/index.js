@@ -18,7 +18,7 @@ const Intro = styled.div.attrs({
 `
 
 const Headline = styled.h1.attrs({
-  className: `f2 f1-l ma0 pa3 center mw8 lh-title`
+  className: `f2 f1-l ma0 pa3 center mw8 lh-title relative z-1`
 })``
 
 const Image = styled.img.attrs({
@@ -28,7 +28,7 @@ const Image = styled.img.attrs({
 })``
 
 const Autobiography = styled.div.attrs({
-  className: "ma0 pa3 center mw8 f4 lh-copy"
+  className: "ma0 pa3 center mw8 f4 lh-copy relative z-1"
 })`
   & > p {
     margin: 0 auto;
