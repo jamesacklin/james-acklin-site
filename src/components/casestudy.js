@@ -50,6 +50,10 @@ const Story = styled.div.attrs({
   & figure {
     clear: both;
   }
+
+  & h3 {
+    text-align: center;
+  }
 `
 
 const CaseStudy = ({ fm, content, ast }) => (

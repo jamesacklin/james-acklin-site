@@ -14,4 +14,48 @@ Upon acquisition in 2017, Rhiza's general-purpose analytics product needed to se
 
 We proposed targeting two different groups of users, introducing "Creator" and "Consumer" roles. The objective was to mask off just enough complexity and provide a refined workflow for "Consumer" users, while enhancing expressive power and publishing capabilities for "Creator" users. Along the way, we would develop a syndication model of pre-built research stories for "Consumer" users to subscribe to—thus creating a new revenue stream for Nielsen in local markets.
 
-<Figure src="rhiza_bifurcation_scale.png" alt="A diagram showing users' familiarity with Rhiza and the anticipated uses for Templates" caption="→ Based on stakeholder interviews and early feedback with existing Nielsen customers, we proposed introducing two primary roles, which would give us adequate coverage for many different personas." />
+<div>
+  <Figure src="rhiza_bifurcation_scale.png" 
+          alt="A diagram showing users' familiarity with Rhiza and the anticipated uses for Templates" 
+          caption="→ Based on stakeholder interviews and early feedback with existing Nielsen customers, we proposed introducing two primary roles, which would give us adequate coverage for many different personas." />
+</div>
+
+<div>
+  <Figure src="rhiza_template_improvements.png" 
+          alt="Research findings and several proposed features to provide backfill support for new user personas" 
+          caption="→ Summarized research findings and proposed a suite of features for validation. These features were designed to gear the system to users without time or budget to invest in a technical research workflow.<br><br>These features expanded the capabilities of the existing &ldquo;Template&rdquo; infrastruture to enable the creation of simple, custom interfaces." />
+</div>
+
+<div>
+  <Figure src="rhiza_user_capabilities.png" 
+          alt="Diagrams depicting two different user flows through the Rhiza system" 
+          caption="→ Created user-focused capability diagrams for socializing the bifrucation concept and laying out the template publishing / consumption model.<br><br>→ Mocked up an extremely low-fidelity cartoon prototype and validated this workflow with potential users." />
+</div>
+
+<div>
+  <Figure src="rhiza_explorer_ia.png" 
+          alt="A slide deck from a review of information architecture approach for browsing a feed of like bits of content" 
+          caption="→ Researched and applied an approach enabling discovery and recognition in a feed of published Templates, dubbed the &ldquo;Explorer.&rdquo;" />
+</div>
+
+<div>
+  <Figure src="rhiza_ia_test.png" 
+          alt="A screenshot showing an interactive feed prototype in Principle." 
+          caption="→ Tested information architecture and interaction model with several user proxies." /> 
+</div>
+
+<div>
+  <Figure src="rhiza_template_interfaces.png" 
+          alt="Wireframes and diagrams depicting Template cards, sharing interactions, and publishing workflow." 
+          caption="→ Developed information design diagrams, interface mockups, and visual guidelines for Template &ldquo;Cards.&rdquo;<br><br>→ Created system architecture drawings to illustrate Creator-to-Consumer publishing mechanism." />
+</div>
+
+<div>
+  <Figure src="rhiza_explorer_phases.png"
+          alt="Screenshots of various stages of the Rhiza Explorer."
+          caption="→ Constructed initial in-browser  prototypes with Vue.js.<br><br>→ Iterated with visual designer and product owners to land on a non-standard, uniquely non-corporate visual style.<br><br>→ Assisted with final implementation in production Angular application." />
+</div>
+
+### Outcomes
+
+The newly-adapted Rhiza product generated $5m annual recurring revenue for Nielsen with ~100 local TV & radio clients (~1,200 individual users). Rhiza's Template creation and publishing model led to formation of Media Analytics' Dashboard team, a team of 5 analysts creating valuable custom end-solutions for clients. These efforts also began critical conversations within Media Analytics about "always-on" solutions and the value of delivering software over services.
