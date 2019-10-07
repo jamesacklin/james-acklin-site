@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "Your Gatsby App Name",
+  "alias": [
+    "ackl.in",
+    "www.ackl.in",
+    "jamesacklin.com",
+    "www.jamesacklin.com"
+  ],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "public"
+      }
+    }
+  ]
+}
