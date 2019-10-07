@@ -10,13 +10,53 @@ image: rhiza_user_data.png
 order: 2
 ---
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-Why do we use it?
+One of Rhiza's early key differentiators was that users could bring their own datasets and analyse them alongside bigger, syndicated datasets using the same tools. These datasets could be from private collection, exports from other tools, or really anything that fit in a CSV file. This feature proved to be useful for Nielsen Media Analytics analysts, as they frequently used Rhiza as a central clearinghouse for frequently-updated, custom data delivery for clients. These user-contributed datasets were represented as single tables, generated from a single CSV file.
 
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+As Rhiza's importance in the Media Analytics offering suite grew, analysts needed to conduct rolling updates to datasets in Rhiza without duplicative visualization work. As a result, we introduced a "dataset" structure, composed of multiple underlying files. We designed several rules for the system to produce a composite dataset of several files, and allowed users to manage datasets they created.
 
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+User-contributed data was always a focus area for usability and feature improvements, but usually took a backseat to more pressing issues of technical debt. I had investigated improving the usability of the feature several times—once in March 2015, then again in February 2016.
 
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+<div>
+  <Figure src="rhiza_user_data_preamble.png" 
+          alt="Diagram outlining usability improvements to user-uploaded dataset interface in Rhiza." 
+          caption="→ Began as exploratory concept in March 2015, revisited in February 2016." />
+</div>
 
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+Based on some interviews with Media Analytics analysts, I constructed a few diagrams outlinign how the system should behave from a user-interaction perspective.
+
+<div>
+  <Figure src="rhiza_user_data_flow.png" 
+          alt="" 
+          caption="→ Quickly diagrammed interface to test model and validate overall physics." />
+</div>
+
+I then collaborated directly with engineering to create operational diagrams of several usage scenarios to better design an interface aligned with users' mental models. We also outlined exactly how the system should behave in each of these given scenarios with the explicit understanding that the interface should abstract atop these operations and provide a seamless experience. These scenarios eventually became implementation stories and test cases.
+
+<div>
+  <Figure src="rhiza_user_data_operation.png" 
+          alt="" 
+          caption="→ Generated a detailed abstract talking through each scenario and articulating how the system should respond. This proved to be later useful for quality assurance, generating training and onboarding materials, and writing tests for the new feature." />
+</div>
+
+With the technical underpinnings in place, I mocked up the new dataset editor in the browser using Vue.js. We wanted to move quickly, so it was easy to lay out the interface, add styling and animations, and define component states directly in the browser. We then validated this prototype with users, stakeholders, and anyone who wanted to give their input to the feature's development.
+
+Prototyping in the browser also made it easy to define design requirements directly on element DOM nodes and display them with a guided walkthrough. This effectively described the relationship between various component states and communicated the interface's intent, reducing friction and surprise later in the development process.
+
+<div>
+  <Figure src="rhiza_user_data_prototype.png" 
+          alt="" 
+          caption="→ Prototyped interface in JS to communicate and test interaction." />
+</div>
+
+<div>
+  <Figure src="rhiza_user_data_meta.png" 
+          alt="" 
+          caption="→ Added meta-markup layer in later versions of prototype to demonstrate and clarify design requirements in situ." />
+</div>
+
+
+### Outcome
+
+With this feature, Media Analytics analysts constructed and delivered on-the-fly updates to dashboards for Nike, Facebook, and other high-profile, high-value clients. Thanks to our design-in-code approach, we cut implementation time nearly in half, beating our sprint estimates and making our product managers very happy.
+
+This feature also opened new use-cases for Rhiza within Nielsen as a general-purpose analytics delivery platform and began some strategic conversations about programmatic addressability.
