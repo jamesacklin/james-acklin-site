@@ -70,4 +70,4 @@ The new, bootstrapped owners of Steady State commissioned me to provide a logo-m
 
 ### Outcome
 
-Steady State Cycle is now a profitable and growing high-end cycling repair and sales operation in Fox Chapel, a suburb of Pittsburgh, Pennsylvania. The shop is a destination for riders and racers who appreciate a distinguishing touch for service and rock-solid guarantees. The owners have received multiple positive comments on the logo and identity system, and it remains one of the strongest graphic representations of cycling in the Pittsburgh area.
+Steady State Cycles is now a profitable and growing high-end cycling repair and sales operation in Fox Chapel, a suburb of Pittsburgh, Pennsylvania. The shop is a destination for riders and racers who appreciate a distinguishing touch for service and rock-solid guarantees. The owners have received multiple positive comments on the logo and identity system, and it remains one of the strongest graphic representations of cycling in the Pittsburgh area.
