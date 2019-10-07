@@ -26,11 +26,17 @@ We proposed targeting two different groups of users, introducing "Creator" and "
           caption="→ Summarized research findings and proposed a suite of features for validation. These features were designed to gear the system to users without time or budget to invest in a technical research workflow.<br><br>These features expanded the capabilities of the existing &ldquo;Template&rdquo; infrastruture to enable the creation of simple, custom interfaces." />
 </div>
 
+We wanted to validate both the positioning of the product and this new, bifurcated user model. I created a few diagrams quickly showing the feature surface area each user class would cover. I validated this with potential users and subject-matter experts.
+
 <div>
   <Figure src="rhiza_user_capabilities.png" 
           alt="Diagrams depicting two different user flows through the Rhiza system" 
           caption="→ Created user-focused capability diagrams for socializing the bifrucation concept and laying out the template publishing / consumption model.<br><br>→ Mocked up an extremely low-fidelity cartoon prototype and validated this workflow with potential users." />
 </div>
+
+I also conducted an academic exercise exploring various ways people tend to browse feeds of information, and proposed several ways of "chunking" the interface up to avoid both nesting menu options to excessive depths  _and_ presenting users with a wall of indiscernable chaos.
+
+This was an important step for developing our pre-fabricated research stories. Rhiza needed carefully manage a curated feed, which was new territory for both us and our acquiring Nielsen team.
 
 <div>
   <Figure src="rhiza_explorer_ia.png" 
@@ -44,16 +50,18 @@ We proposed targeting two different groups of users, introducing "Creator" and "
           caption="→ Tested information architecture and interaction model with several user proxies." /> 
 </div>
 
-<div>
-  <Figure src="rhiza_template_interfaces.png" 
-          alt="Wireframes and diagrams depicting Template cards, sharing interactions, and publishing workflow." 
-          caption="→ Developed information design diagrams, interface mockups, and visual guidelines for Template &ldquo;Cards.&rdquo;<br><br>→ Created system architecture drawings to illustrate Creator-to-Consumer publishing mechanism." />
-</div>
+I supported implementation by first prototyping the interface in the browser using Vue.js, then passing the prototype off to engineering when product leaders were satisfied with both visual and interactive elements. I then pivoted to creating traditional interaction design artifacts such as flow diagrams and wireframes.
 
 <div>
   <Figure src="rhiza_explorer_phases.png"
           alt="Screenshots of various stages of the Rhiza Explorer."
           caption="→ Constructed initial in-browser  prototypes with Vue.js.<br><br>→ Iterated with visual designer and product owners to land on a non-standard, uniquely non-corporate visual style.<br><br>→ Assisted with final implementation in production Angular application." />
+</div>
+
+<div>
+  <Figure src="rhiza_template_interfaces.png" 
+          alt="Wireframes and diagrams depicting Template cards, sharing interactions, and publishing workflow." 
+          caption="→ Developed information design diagrams, interface mockups, and visual guidelines for Template &ldquo;Cards.&rdquo;<br><br>→ Created system architecture drawings to illustrate Creator-to-Consumer publishing mechanism." />
 </div>
 
 ### Outcomes

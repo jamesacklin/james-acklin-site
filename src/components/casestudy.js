@@ -83,7 +83,9 @@ const CaseStudy = ({ fm, content, ast }) => (
     <Story>
       {renderAst(ast)}
     </Story>
-    
+    <footer className="tc mt5">
+      ❖
+    </footer>
   </Article>
 )
 
