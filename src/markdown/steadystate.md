@@ -63,6 +63,13 @@ The new, bootstrapped owners of Steady State commissioned me to provide a logo-m
 </div>
 
 <div>
+  <Figure src="ssc_website.png"
+          alt=""
+          caption="→ Website, built with Nuxt.js, then refactored with Sapper. Statically hosted on Now. <a class='black' href='https://www.steadystatecycles.com'>View site</a>, or <a class='black' href='https://www.github.com/jamesacklin/ssc'>view source on GitHub</a>" />
+
+</div>
+
+<div>
   <Figure src="ssc_store.jpg" 
           alt="" 
           caption="→ Helped team apply logo to real-world signage in brick-and-mortar retail context." />
