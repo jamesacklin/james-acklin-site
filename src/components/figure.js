@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import styled from "styled-components"
 import classNames from "classnames"
 import Image from "./image"
 
@@ -37,18 +38,64 @@ const Figure = ({ src, alt, caption }) => {
     }
   )
 
+  const FigureElement = styled.figure.attrs({
+    className: figureClasses
+  })`
+    cursor: zoom-in;
+
+    &.figure-zoom {
+      position: relative;
+      cursor: zoom-out;
+    }
+    @media (min-width: 960px){
+      &.figure-zoom {
+        width: 100%;
+        margin-left: 0%;
+      }
+    }
+    
+    @media (min-width: 1320px){
+      &.figure-zoom {
+        width: 112.5%;
+        margin-left: -6.25%;
+      }
+    }
+    
+    @media (min-width: 1600px){
+      &.figure-zoom {
+        width: 125%;
+        margin-left: -12.5%;
+      }
+    }
+    
+    @media (min-width: 2000px){
+      &.figure-zoom {
+        width: 150%;
+        margin-left: -25%;
+      }
+    }
+  `
+
+  const ClickWrapper = styled.div.attrs({
+    className: imgWrapperClasses
+  })``
+
+  const Caption = styled.figcaption.attrs({
+    className: figCaptionClasses
+  })`
+    .figure-zoom & {
+      width: 0px;
+    }
+  `
+
   return (
-    <figure className={figureClasses}>
-      <div style={{ transition: 'width 0.2s ease' }}
-           className={imgWrapperClasses} 
-           onClick={() => setZoom(!zoom)}>
+    <FigureElement>
+      <ClickWrapper onClick={() => setZoom(!zoom)}>
         <Image src={src} 
                alt={alt} />
-      </div>
-      <figcaption style={{ transition: 'width 0.2s ease' }}
-                  className={figCaptionClasses}
-                  dangerouslySetInnerHTML={{ __html: caption }} />
-    </figure>
+      </ClickWrapper>
+      <Caption dangerouslySetInnerHTML={{ __html: caption }} />
+    </FigureElement>
   )
 }
 
