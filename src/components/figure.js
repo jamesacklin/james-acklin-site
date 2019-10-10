@@ -27,28 +27,26 @@ const Figure = ({ src, alt, caption }) => {
   const figCaptionClasses = classNames(
     'mt3',
     'mt0-l',
-    'w-20-l',
-    'pl3-l',
     'self-center',
     'f6',
     {
-      'dn': zoom,
-      'db': !zoom,
-      'o-0': zoom,
-      'o-100': !zoom
+      'pl3-l': !zoom,
+      'w-20-l': !zoom,
+      'o-100': !zoom,
+      'o-0': zoom
     }
   )
 
   return (
     <figure className={figureClasses}>
-      <div style={{ transition: 'all 0.2s ease' }}
+      <div style={{ transition: 'width 0.2s ease' }}
            className={imgWrapperClasses} 
            onClick={() => setZoom(!zoom)}>
         <Image src={src} 
                alt={alt} />
       </div>
-      <figcaption style={{ transition: 'all 0.2s ease' }}
-      className={figCaptionClasses}
+      <figcaption style={{ transition: 'width 0.2s ease' }}
+                  className={figCaptionClasses}
                   dangerouslySetInnerHTML={{ __html: caption }} />
     </figure>
   )
