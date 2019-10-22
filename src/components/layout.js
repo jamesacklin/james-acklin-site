@@ -13,6 +13,8 @@ import styled from "styled-components"
 // eslint-disable-next-line
 import tachyons from "tachyons"
 
+import { Hello } from "./Hello"
+
 import Header from "./header"
 import "../fonts/f.css"
 import "../fonts/tnr.css"
@@ -35,6 +37,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Hello compiler="TypeScript" framework="React" />
       <Header siteTitle={data.site.siteMetadata.title} />
       <Frame>
         <main>{children}</main>
