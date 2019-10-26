@@ -2,7 +2,7 @@
   "name": "james-acklin-gatsby",
   "private": true,
   "description": "A digital product designer and front-end web developer focused on usability, prototyping, and design systems.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "James Acklin <james@ackl.in>",
   "dependencies": {
     "classnames": "^2.2.6",
