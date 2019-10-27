@@ -1,9 +1,9 @@
 .sans-serif {
-  font-family: "f";
+  font-family: "i", "Helvetica", "Arial", sans-serif;
 }
 
 .serif  {
-  font-family: "tnr";
+  font-family: "tnr", "Times New Roman", "Times", serif;
 }
 
 body {

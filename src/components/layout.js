@@ -14,7 +14,7 @@ import styled from "styled-components"
 import tachyons from "tachyons"
 
 import Header from "./header"
-import "../fonts/f.css"
+import "../fonts/i.css"
 import "../fonts/tnr.css"
 import "./layout.css"
 

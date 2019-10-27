@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'i';
+  src: url('Inter-Regular.woff2') format('woff2'),
+       url('Inter-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'i';
+  src: url('Inter-Italic.woff2') format('woff2'),
+       url('Inter-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
