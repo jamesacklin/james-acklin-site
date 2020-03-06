@@ -1,19 +1,10 @@
 {
   "version": 2,
-  "name": "James Acklin",
+  "name": "james-acklin-site",
   "alias": [
     "ackl.in",
     "www.ackl.in",
     "jamesacklin.com",
     "www.jamesacklin.com"
-  ],
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@now/static-build",
-      "config": {
-        "distDir": "public"
-      }
-    }
   ]
 }
